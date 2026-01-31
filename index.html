@@ -7,7 +7,7 @@
     <title>Classy Bear Cabin | Luxury Gatlinburg Cabin Rental</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,8 +15,7 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="logo-icon">🐻</span>
-                <span class="logo-text">Classy Bear Cabin</span>
+                <img src="images/logo.jpg" alt="Classy Bear Cabin" class="logo-img">
             </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
@@ -30,14 +29,14 @@
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="https://classybearcabin.com/search?period=daily&duration=1&adults=1" class="btn btn-nav" target="_blank">Book Now</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-736355501162383794/original/bfc9dde6-d16b-4176-bb25-743bdf652ecd.jpeg');"></div>
+        <div class="hero-bg" style="background-image: url('images/hero-mountain-view.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <span class="hero-tagline">Refined Wilderness</span>
@@ -48,7 +47,7 @@
                 <span>👥 Sleeps 9</span>
                 <span>🛁 Hot Tub</span>
             </div>
-            <a href="https://classybearcabin.com/search?period=daily&duration=1&adults=1" class="btn btn-primary" target="_blank">Book Your Stay</a>
+            <a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Book Your Stay</a>
         </div>
         <div class="scroll-indicator">
             <span>Scroll</span>
@@ -185,34 +184,41 @@
                     <p class="lead">Experience the best of Gatlinburg from our perfectly situated mountain retreat.</p>
                     
                     <div class="attractions">
-                        <div class="attraction">
+                        <a href="https://www.gatlinburg.com" target="_blank" class="attraction">
                             <div class="attraction-distance">2 miles</div>
                             <div class="attraction-info">
                                 <h4>Downtown Gatlinburg</h4>
                                 <p>Shops, restaurants, attractions & entertainment</p>
                             </div>
-                        </div>
-                        <div class="attraction">
+                        </a>
+                        <a href="https://obergatlinburg.com" target="_blank" class="attraction">
                             <div class="attraction-distance">1 mile</div>
                             <div class="attraction-info">
                                 <h4>Ober Mountain</h4>
                                 <p>Skiing, ice skating, alpine coaster & more</p>
                             </div>
-                        </div>
-                        <div class="attraction">
+                        </a>
+                        <a href="https://www.nps.gov/grsm" target="_blank" class="attraction">
                             <div class="attraction-distance">Minutes</div>
                             <div class="attraction-info">
                                 <h4>Great Smoky Mountains</h4>
                                 <p>Hiking trails, scenic drives & wildlife</p>
                             </div>
-                        </div>
-                        <div class="attraction">
+                        </a>
+                        <a href="https://www.mypigeonforge.com" target="_blank" class="attraction">
                             <div class="attraction-distance">Nearby</div>
                             <div class="attraction-info">
                                 <h4>Pigeon Forge</h4>
-                                <p>Dollywood, dinner shows & outlet shopping</p>
+                                <p>Dinner shows, go-karts & outlet shopping</p>
                             </div>
-                        </div>
+                        </a>
+                        <a href="https://www.dollywood.com" target="_blank" class="attraction">
+                            <div class="attraction-distance">Nearby</div>
+                            <div class="attraction-info">
+                                <h4>Dollywood</h4>
+                                <p>Award-winning theme park & Splash Country water park</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
                 <div class="location-map">
@@ -232,16 +238,36 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <!-- CTA / Booking Section -->
+    <section class="cta" id="booking">
         <div class="cta-bg" style="background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzM2MzU1NTAxMTYyMzgzNzk0/original/03a53b2a-9498-49a0-b5f8-65c8559b75f4.jpeg');"></div>
         <div class="cta-overlay"></div>
         <div class="cta-content">
             <h2>Ready for Your Mountain Getaway?</h2>
             <p>Book your dream cabin experience and create memories that last a lifetime</p>
-            <a href="https://classybearcabin.com/search?period=daily&duration=1&adults=1" class="btn btn-primary btn-large" target="_blank">Check Availability</a>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal()">Check Availability</button>
         </div>
     </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+            <div
+                class="igms-direct-booking-widget"
+                id="directBooking1769880755749"
+                data-listing-id="undefined-listing-uuid"
+                data-widget-color="#FFC107"
+                data-text-check-availability="Check Availability"
+                data-text-book-now="Book Now"
+                data-preview="true"
+            ></div>
+        </div>
+    </div>
+    <script
+        src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336"
+        type="application/javascript"
+    ></script>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -266,7 +292,7 @@
                     <div class="contact-card">
                         <div class="contact-icon">🌐</div>
                         <h4>Book Online</h4>
-                        <p><a href="https://classybearcabin.com" target="_blank">classybearcabin.com</a></p>
+                        <p><a href="#" onclick="openBookingModal(); return false;">Check Availability</a></p>
                     </div>
                 </div>
                 <div class="contact-features">
@@ -289,8 +315,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <span class="logo-icon">🐻</span>
-                    <span class="logo-text">Classy Bear Cabin</span>
+                    <img src="images/logo.jpg" alt="Classy Bear Cabin" class="footer-logo-img">
                     <p>Refined Wilderness in the Heart of the Smokies</p>
                 </div>
                 <div class="footer-links">
@@ -369,6 +394,31 @@
         document.querySelectorAll('.amenity-card, .gallery-item, .attraction, .contact-card').forEach(el => {
             el.classList.add('fade-in');
             observer.observe(el);
+        });
+
+        // Booking Modal
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modal on background click
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBookingModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBookingModal();
+            }
         });
     </script>
 </body>
