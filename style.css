@@ -240,18 +240,18 @@ p {
 }
 
 .logo-img {
-    height: 60px;
+    height: 90px;
     width: auto;
     filter: brightness(1.1);
 }
 
 .navbar.scrolled .logo-img {
-    height: 50px;
+    height: 75px;
 }
 
 .footer-logo-img {
-    max-height: 100px;
-    max-width: 200px;
+    max-height: 150px;
+    max-width: 300px;
     width: auto;
     height: auto;
     object-fit: contain;
@@ -802,7 +802,7 @@ a.attraction:hover {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-bottom: var(--space-md);
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -832,12 +832,15 @@ a.attraction:hover {
 
 .footer-links {
     display: flex;
-    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-md);
 }
 
 .footer-links a {
     color: rgba(255,255,255,0.7);
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 
 .footer-links a:hover {
@@ -847,6 +850,10 @@ a.attraction:hover {
 .footer-bottom {
     text-align: center;
     padding-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
 }
 
 .footer-bottom p {

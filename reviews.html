@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read what guests are saying about Classy Bear Cabin - real reviews from Airbnb, Booking.com, and more.">
+    <title>Classy Guest Reviews | Classy Bear Cabin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .reviews-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: var(--color-white);
+        }
+        .reviews-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/hero-mountain-view.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .reviews-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(44, 36, 22, 0.6), rgba(44, 36, 22, 0.8));
+        }
+        .reviews-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: var(--space-xl) var(--space-md);
+        }
+        .reviews-hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--space-sm);
+        }
+        .reviews-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .reviews-section {
+            padding: var(--space-xl) 0;
+            background: var(--color-cream);
+            min-height: 50vh;
+        }
+        
+        .reviews-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#location">Location</a></li>
+                <li><a href="local-guide.html">Things to Do</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="reviews-hero">
+        <div class="reviews-hero-bg"></div>
+        <div class="reviews-hero-overlay"></div>
+        <div class="reviews-hero-content">
+            <h1>Classy Guest Reviews</h1>
+            <p>Don't just take our word for it — hear what our guests have to say</p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-container">
+                <!-- Elfsight All-in-One Reviews -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-23e5faea-9c91-436c-a308-c3e6b6b101bb" data-elfsight-app-lazy></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg" style="background-image: url('images/hero-mountain-view.jpg');"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Ready to Experience It Yourself?</h2>
+            <p>Book your stay and create your own 5-star memories</p>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal()">Book Your Stay</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#amenities">Amenities</a>
+                    <a href="index.html#gallery">Gallery</a>
+                    <a href="index.html#location">Location</a>
+                    <a href="local-guide.html">Things to Do</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo-img">
+                <p>&copy; 2025 Classy Bear Cabin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+            <div
+                class="igms-direct-booking-widget"
+                id="directBooking1769880755749"
+                data-listing-id="undefined-listing-uuid"
+                data-widget-color="#FFC107"
+                data-text-check-availability="Check Availability"
+                data-text-book-now="Book Now"
+                data-preview="true"
+            ></div>
+        </div>
+    </div>
+    <script
+        src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336"
+        type="application/javascript"
+    ></script>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Booking Modal
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBookingModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBookingModal();
+            }
+        });
+    </script>
+</body>
+</html>

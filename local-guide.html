@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your insider guide to the best things to do near Classy Bear Cabin - restaurants, hikes, attractions, and hidden gems in Gatlinburg and the Smoky Mountains.">
+    <title>Things to Do | Classy Bear Cabin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .guide-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: var(--color-white);
+        }
+        .guide-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6NzM2MzU1NTAxMTYyMzgzNzk0/original/7e5613f5-66d5-403c-b421-c6734df72a62.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .guide-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(44, 36, 22, 0.6), rgba(44, 36, 22, 0.8));
+        }
+        .guide-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: var(--space-xl) var(--space-md);
+        }
+        .guide-hero h1 {
+            color: var(--color-white);
+            margin-bottom: var(--space-sm);
+        }
+        .guide-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .guide-section {
+            padding: var(--space-xl) 0;
+        }
+        .guide-section:nth-child(even) {
+            background: var(--color-cream);
+        }
+        
+        .guide-category {
+            margin-bottom: var(--space-lg);
+        }
+        .guide-category:last-child {
+            margin-bottom: 0;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-md);
+        }
+        .category-icon {
+            font-size: 2.5rem;
+        }
+        .category-header h2 {
+            margin: 0;
+        }
+        
+        .spot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+        
+        .spot-card {
+            background: var(--color-white);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--color-stone);
+        }
+        .spot-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-3px);
+        }
+        a.spot-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        a.spot-card:hover h3 {
+            color: var(--color-primary);
+        }
+        .spot-card h3 {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .spot-card .vibe {
+            font-size: 0.8rem;
+            background: var(--color-accent-light);
+            color: var(--color-primary-dark);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .spot-card p {
+            color: var(--color-text-light);
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        .spot-card .tip {
+            font-size: 0.85rem;
+            color: var(--color-forest);
+            font-style: italic;
+            padding-top: 0.5rem;
+            border-top: 1px dashed var(--color-stone);
+        }
+        .spot-card .tip::before {
+            content: "💡 ";
+        }
+        
+        .must-do {
+            border-left: 4px solid var(--color-accent);
+        }
+        
+        .hike-difficulty {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+        .hike-difficulty.easy { background: #d4edda; color: #155724; }
+        .hike-difficulty.moderate { background: #fff3cd; color: #856404; }
+        .hike-difficulty.hard { background: #f8d7da; color: #721c24; }
+        
+        .pro-tip-banner {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+            color: var(--color-white);
+            padding: var(--space-md);
+            border-radius: var(--radius-md);
+            margin: var(--space-lg) 0;
+            text-align: center;
+        }
+        .pro-tip-banner h3 {
+            color: var(--color-white);
+            margin-bottom: 0.5rem;
+        }
+        .pro-tip-banner p {
+            margin: 0;
+            opacity: 0.95;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="local-guide.html" class="active">Things to Do</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="guide-hero">
+        <div class="guide-hero-bg"></div>
+        <div class="guide-hero-overlay"></div>
+        <div class="guide-hero-content">
+            <h1>The Things to Do</h1>
+            <p>Your insider's guide to the best eats, adventures, and hidden gems around Gatlinburg & the Smokies</p>
+        </div>
+    </section>
+
+    <!-- Outdoor Adventures -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🥾</span>
+                    <h2>Epic Hikes & Outdoor Adventures</h2>
+                </div>
+                <div class="spot-grid">
+                    <a href="https://www.alltrails.com/trail/us/tennessee/laurel-falls-trail" target="_blank" class="spot-card must-do">
+                        <h3>Laurel Falls <span class="hike-difficulty easy">Easy</span></h3>
+                        <p>The most popular waterfall hike in the Smokies — and for good reason. A paved 2.6-mile round trip leads to an 80-foot cascading waterfall. Perfect for all ages!</p>
+                        <div class="tip">Go early (before 8am) or late afternoon to avoid crowds. The falls face east, so morning light is magical for photos.</div>
+                    </a>
+                    <a href="https://www.alltrails.com/trail/us/north-carolina/clingmans-dome-observation-tower-trail" target="_blank" class="spot-card">
+                        <h3>Clingmans Dome <span class="hike-difficulty easy">Easy</span></h3>
+                        <p>The highest point in Tennessee! A short but steep half-mile walk to a flying saucer-shaped observation tower with 360° views of endless mountain ridges.</p>
+                        <div class="tip">Clear days you can see over 100 miles. Bring a jacket — it's always 10-15° cooler up there.</div>
+                    </a>
+                    <a href="https://www.alltrails.com/trail/us/tennessee/alum-cave-trail-to-mount-leconte" target="_blank" class="spot-card must-do">
+                        <h3>Alum Cave Trail <span class="hike-difficulty moderate">Moderate</span></h3>
+                        <p>The most scenic trail in the park. Hike through old-growth forest, across fallen logs, under a massive rock overhang, and up to Mt. LeConte if you're feeling ambitious.</p>
+                        <div class="tip">The bluffs at 2.3 miles make a perfect turnaround point. Total: 4.6 miles round trip with stunning views.</div>
+                    </a>
+                    <a href="https://www.nps.gov/grsm/planyourvisit/roaringfork.htm" target="_blank" class="spot-card">
+                        <h3>Roaring Fork Motor Trail</h3>
+                        <p>A one-way scenic loop drive through lush forest with historic cabins, rushing streams, and easy roadside waterfalls. No hiking required!</p>
+                        <div class="tip">Stop at Grotto Falls trailhead for a moderate hike to the only waterfall you can walk behind.</div>
+                    </a>
+                    <a href="https://www.nps.gov/grsm/planyourvisit/cadescove.htm" target="_blank" class="spot-card">
+                        <h3>Cades Cove Loop</h3>
+                        <p>An 11-mile valley loop famous for wildlife. Spot deer, wild turkeys, black bears, and coyotes among historic homesteads and churches.</p>
+                        <div class="tip">Wednesday & Saturday mornings are car-free until 10am — perfect for biking! Rent bikes at the campground store.</div>
+                    </a>
+                    <a href="https://www.alltrails.com/trail/us/tennessee/chimney-tops-trail" target="_blank" class="spot-card">
+                        <h3>Chimney Tops <span class="hike-difficulty hard">Strenuous</span></h3>
+                        <p>A challenging 4-mile round trip with serious elevation gain, but the panoramic views from the rocky pinnacles are absolutely worth the burn.</p>
+                        <div class="tip">Trail reopened after fire damage. The final climb to the tippy-top is closed, but views from the overlook are still incredible.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food & Drink -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🍽️</span>
+                    <h2>Where to Eat & Drink</h2>
+                </div>
+                
+                <div class="pro-tip-banner">
+                    <h3>🐻 Bear's Breakfast Rule</h3>
+                    <p>Most restaurants don't take reservations and lines get LONG. For popular spots, arrive 15-20 minutes before they open or try a late lunch (2-3pm) to skip the wait.</p>
+                </div>
+                
+                <div class="spot-grid">
+                    <a href="https://www.peddlergatlinburg.com" target="_blank" class="spot-card must-do">
+                        <h3>The Peddler Steakhouse <span class="vibe">Special Occasion</span></h3>
+                        <p>Legendary Gatlinburg steakhouse since 1976. You pick your cut from the meat counter and they grill it to perfection. The salad bar is surprisingly amazing.</p>
+                        <div class="tip">Sit riverside if you can. Make reservations — this place books up fast!</div>
+                    </a>
+                    <a href="https://www.pancakepantry.com" target="_blank" class="spot-card must-do">
+                        <h3>Pancake Pantry <span class="vibe">Breakfast</span></h3>
+                        <p>The OG pancake spot that started it all. 24 varieties of pancakes including sweet potato, Caribbean, and the legendary Austrian Apple. Worth every minute in line.</p>
+                        <div class="tip">They don't take cards for tips — bring cash for your server!</div>
+                    </a>
+                    <a href="https://thelocalgoat.com" target="_blank" class="spot-card">
+                        <h3>Local Goat <span class="vibe">New American</span></h3>
+                        <p>Elevated comfort food in a hip, modern space. Goat cheese appetizers, creative burgers, and craft cocktails. Great for foodies who want something beyond the usual tourist fare.</p>
+                        <div class="tip">The fried goat cheese balls are legendary. Trust us.</div>
+                    </a>
+                    <a href="https://www.crockettsbreakfastcamp.com" target="_blank" class="spot-card">
+                        <h3>Crockett's Breakfast Camp <span class="vibe">Breakfast</span></h3>
+                        <p>Rustic lodge vibes with massive breakfast portions. Think campfire skillets, stuffed French toast, and biscuits the size of your fist.</p>
+                        <div class="tip">The "Camper's Skillet" will fuel you for an entire day of hiking.</div>
+                    </a>
+                    <a href="https://www.cherokee-grill.com" target="_blank" class="spot-card">
+                        <h3>Cherokee Grill <span class="vibe">Upscale American</span></h3>
+                        <p>White tablecloths meet mountain views. Excellent steaks, fresh trout, and a solid wine list. Perfect for date night or celebrating a special occasion.</p>
+                        <div class="tip">Ask for a table by the windows for sunset views.</div>
+                    </a>
+                    <a href="https://olered.com/gatlinburg" target="_blank" class="spot-card">
+                        <h3>Ole Red Gatlinburg <span class="vibe">Fun Vibes</span></h3>
+                        <p>Blake Shelton's honky-tonk restaurant. Southern food, live country music, and a party atmosphere. It's touristy in the best way — embrace it!</p>
+                        <div class="tip">Catch live music most evenings. The Nashville hot chicken is 🔥</div>
+                    </a>
+                    <a href="https://www.sugarlands.com" target="_blank" class="spot-card">
+                        <h3>Sugarlands Distilling Co. <span class="vibe">Moonshine</span></h3>
+                        <p>Free moonshine tastings! Sample everything from traditional corn whiskey to wild flavors like Banana Pudding and Butter Pecan. You WILL leave with bottles.</p>
+                        <div class="tip">The Hazelnut Rum and Appalachian Apple Pie are crowd favorites.</div>
+                    </a>
+                    <a href="https://smoky-mtn-brewery.com" target="_blank" class="spot-card">
+                        <h3>Smoky Mountain Brewery <span class="vibe">Brew Pub</span></h3>
+                        <p>Solid craft beers brewed on-site plus a huge menu of pub favorites. Pool tables, TVs for game days, and a chill vibe. Great for a casual dinner.</p>
+                        <div class="tip">Try the Black Bear Ale — a local staple.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions & Fun -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🎢</span>
+                    <h2>Attractions & Family Fun</h2>
+                </div>
+                <div class="spot-grid">
+                    <a href="https://www.dollywood.com" target="_blank" class="spot-card must-do">
+                        <h3>Dollywood <span class="vibe">Theme Park</span></h3>
+                        <p>Dolly Parton's award-winning theme park. World-class coasters, Appalachian crafts, incredible food, and shows. If you only do ONE thing in Pigeon Forge, do this.</p>
+                        <div class="tip">Buy tickets online in advance. Go on a weekday if possible. The cinnamon bread from The Grist Mill is MANDATORY.</div>
+                    </a>
+                    <a href="https://obergatlinburg.com" target="_blank" class="spot-card must-do">
+                        <h3>Ober Mountain <span class="vibe">Year-Round</span></h3>
+                        <p>Take the aerial tramway for stunning views, then ski in winter or ride the alpine coaster, mountain coaster, and more in summer. Just 1 mile from the cabin!</p>
+                        <div class="tip">The tramway ride alone is worth it for the views. Grab lunch at the top.</div>
+                    </a>
+                    <a href="https://www.ripleyaquariums.com/gatlinburg" target="_blank" class="spot-card">
+                        <h3>Ripley's Aquarium <span class="vibe">All Ages</span></h3>
+                        <p>Walk through an underwater tunnel surrounded by sharks, touch stingrays, and see glowing jellyfish. One of the best aquariums in the Southeast.</p>
+                        <div class="tip">Go after 4pm for smaller crowds. The "Penguin Playhouse" is adorable.</div>
+                    </a>
+                    <a href="https://www.gatlinburgskybridge.com" target="_blank" class="spot-card">
+                        <h3>Gatlinburg SkyBridge <span class="vibe">Views</span></h3>
+                        <p>North America's longest pedestrian suspension bridge! Walk 680 feet across a valley 140 feet in the air. Includes a glass floor panel for the brave.</p>
+                        <div class="tip">Sunset visits are magical. The SkyDeck has rocking chairs with panoramic views.</div>
+                    </a>
+                    <a href="https://www.anakeesta.com" target="_blank" class="spot-card">
+                        <h3>Anakeesta <span class="vibe">Adventure</span></h3>
+                        <p>A mountaintop village with treehouse playground, zip lines, rail runner coaster, and the best views in downtown Gatlinburg.</p>
+                        <div class="tip">The tree canopy walk is beautiful and included with admission.</div>
+                    </a>
+                    <a href="https://www.islandinpigeonforge.com" target="_blank" class="spot-card">
+                        <h3>The Island in Pigeon Forge</h3>
+                        <p>Open-air entertainment complex with the 200-foot Great Smoky Mountain Wheel, rides, restaurants, and the Margaritaville hotel.</p>
+                        <div class="tip">Free parking and admission — you just pay for what you do. Great for evening strolls.</div>
+                    </a>
+                    <a href="https://www.titanicpigeonforge.com" target="_blank" class="spot-card">
+                        <h3>Titanic Museum</h3>
+                        <p>Way cooler than it sounds. Walk through recreated ship rooms, touch a real iceberg, and learn passenger stories. Interactive and surprisingly moving.</p>
+                        <div class="tip">You get a boarding pass with a real passenger's name — find out their fate at the end.</div>
+                    </a>
+                    <a href="https://www.trackfamilyfun.com" target="_blank" class="spot-card">
+                        <h3>Go Karts & Mini Golf</h3>
+                        <p>The Parkway is loaded with options! Check out Track Family Fun Parks for multi-level go-kart tracks or Gatlin's for mini golf with a mountain view.</p>
+                        <div class="tip">Many attractions offer combo deals — ask before you pay!</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenic Drives -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🚗</span>
+                    <h2>Scenic Drives</h2>
+                </div>
+                <div class="spot-grid">
+                    <a href="https://www.nps.gov/grsm/planyourvisit/newfoundgaprd.htm" target="_blank" class="spot-card must-do">
+                        <h3>Newfound Gap Road</h3>
+                        <p>The main road through the park climbing to 5,046 feet at the Tennessee/North Carolina border. Jaw-dropping overlooks, tunnels, and that "top of the world" feeling.</p>
+                        <div class="tip">Stop at every overlook on the way up. The Rockefeller Memorial at Newfound Gap has amazing views.</div>
+                    </a>
+                    <a href="https://www.blueridgeparkway.org" target="_blank" class="spot-card">
+                        <h3>Blue Ridge Parkway</h3>
+                        <p>America's favorite scenic drive! Connect to it from Newfound Gap and cruise along ridgetops. Fall foliage season is absolutely spectacular.</p>
+                        <div class="tip">Pack a picnic — there are beautiful overlooks everywhere.</div>
+                    </a>
+                    <a href="https://www.nps.gov/grsm/planyourvisit/foothillsparkway.htm" target="_blank" class="spot-card">
+                        <h3>Foothills Parkway</h3>
+                        <p>Less crowded alternative with equally stunning views. The "Missing Link" section has incredible overlooks of the Smokies.</p>
+                        <div class="tip">Great sunset drive! Look Rock Tower has 360° views.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🛍️</span>
+                    <h2>Shopping & Souvenirs</h2>
+                </div>
+                <div class="spot-grid">
+                    <a href="https://www.gatlinburg.com/listing/the-village-shops/146/" target="_blank" class="spot-card">
+                        <h3>The Village Shops</h3>
+                        <p>A charming European-style courtyard with 27 unique shops. Find everything from handmade pottery to gourmet kitchen supplies to quirky Gatlinburg tees.</p>
+                        <div class="tip">The Donut Friar inside has legendary donuts — get there early!</div>
+                    </a>
+                    <a href="https://olesmoky.com" target="_blank" class="spot-card">
+                        <h3>Ole Smoky Moonshine</h3>
+                        <p>The original moonshine distillery in Gatlinburg. Free tastings of 20+ flavors in a fun barn atmosphere. Great for gifts!</p>
+                        <div class="tip">The cherries soaked in moonshine are dangerous... dangerously good.</div>
+                    </a>
+                    <a href="https://www.gatlinburgcrafts.com" target="_blank" class="spot-card">
+                        <h3>Great Smoky Arts & Crafts Community</h3>
+                        <p>An 8-mile loop of over 100 artisan studios. Watch craftspeople make pottery, leather goods, brooms, and more. Authentic Appalachian shopping.</p>
+                        <div class="tip">Grab a free trolley from downtown — it stops at shops along the way.</div>
+                    </a>
+                    <a href="https://www.tangeroutlet.com/pigeon-forge" target="_blank" class="spot-card">
+                        <h3>Tanger Outlets (Pigeon Forge)</h3>
+                        <p>Over 100 outlet stores if you need a retail therapy day. Nike, Coach, Kate Spade, and all the usual suspects.</p>
+                        <div class="tip">Sign up for their app for extra coupons and deals.</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insider Tips -->
+    <section class="guide-section">
+        <div class="container">
+            <div class="guide-category">
+                <div class="category-header">
+                    <span class="category-icon">🤫</span>
+                    <h2>Insider Tips</h2>
+                </div>
+                <div class="spot-grid">
+                    <div class="spot-card">
+                        <h3>Beat the Traffic</h3>
+                        <p>The Parkway gets PACKED, especially on weekends. Use the Gatlinburg Bypass or Dollywood Lane to skip the worst of it.</p>
+                    </div>
+                    <div class="spot-card">
+                        <h3>Free Parking Hack</h3>
+                        <p>Park for free at the Gatlinburg Welcome Center and take the free trolley into town. Saves money and stress!</p>
+                    </div>
+                    <div class="spot-card">
+                        <h3>Bear Safety 101</h3>
+                        <p>You're in bear country! Keep food secured, don't approach wildlife, and if you see a bear, stay calm and back away slowly. Never run!</p>
+                    </div>
+                    <div class="spot-card">
+                        <h3>Weather Changes Fast</h3>
+                        <p>Mountain weather is unpredictable. Bring layers, even in summer. Higher elevations can be 10-20° cooler than town.</p>
+                    </div>
+                    <div class="spot-card">
+                        <h3>Cash is King</h3>
+                        <p>Some smaller shops, craft vendors, and cash-only spots still exist. Keep $50-100 cash handy just in case.</p>
+                    </div>
+                    <div class="spot-card">
+                        <h3>Download Offline Maps</h3>
+                        <p>Cell service is spotty in the park. Download Google Maps or the NPS app for offline use before you head out.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg" style="background-image: url('images/hero-mountain-view.jpg');"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Ready to Explore?</h2>
+            <p>Book your stay at Classy Bear Cabin and start your Smoky Mountain adventure</p>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal()">Book Your Stay</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#amenities">Amenities</a>
+                    <a href="index.html#gallery">Gallery</a>
+                    <a href="local-guide.html">Things to Do</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo-img">
+                <p>&copy; 2025 Classy Bear Cabin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+            <div
+                class="igms-direct-booking-widget"
+                id="directBooking1769880755749"
+                data-listing-id="undefined-listing-uuid"
+                data-widget-color="#FFC107"
+                data-text-check-availability="Check Availability"
+                data-text-book-now="Book Now"
+                data-preview="true"
+            ></div>
+        </div>
+    </div>
+    <script
+        src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336"
+        type="application/javascript"
+    ></script>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Booking Modal
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeBookingModal();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeBookingModal();
+            }
+        });
+    </script>
+</body>
+</html>
