@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Classy Bear Cabin - Gatlinburg Cabin Rental</title>
+    <meta name="description" content="Travel tips, local guides, and insider info for your Smoky Mountain getaway at Classy Bear Cabin in Gatlinburg, TN.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero {
+            padding: 120px 0 60px;
+            text-align: center;
+            background: var(--color-cream);
+        }
+        .blog-hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--color-dark);
+            margin-bottom: 1rem;
+        }
+        .blog-hero p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .blog-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+        .blog-card-meta {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.5rem;
+        }
+        .blog-card h2 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            color: var(--color-dark);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+        .blog-card h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .blog-card h2 a:hover {
+            color: var(--color-primary);
+        }
+        .blog-card p {
+            color: var(--color-text);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .blog-card .read-more {
+            color: var(--color-primary);
+            font-weight: 500;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .blog-card .read-more:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+            }
+            .blog-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin Logo" class="nav-logo-img">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../local-guide.html">Local Guide</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Cabin Chronicles</h1>
+            <p>Travel tips, local guides, and insider info for your perfect Smoky Mountain getaway</p>
+        </div>
+    </section>
+
+    <section class="blog-grid">
+        <article class="blog-card">
+            <a href="valentines-day-getaway-gatlinburg.html">
+                <img src="../images/gallery/hot-tub.jpg" alt="Hot tub with mountain views" loading="lazy">
+            </a>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">February 1, 2026 • Romance</div>
+                <h2><a href="valentines-day-getaway-gatlinburg.html">Your Valentine's Day Escape in the Smokies</a></h2>
+                <p>Forget crowded restaurants and predictable gifts. This Valentine's Day, give the gift of a romantic mountain getaway with stunning views, a private hot tub, and memories that last forever.</p>
+                <a href="valentines-day-getaway-gatlinburg.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <a href="winter-wonderland-gatlinburg.html">
+                <img src="../images/gallery/snow-view.jpg" alt="Snowy mountain view" loading="lazy">
+            </a>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">January 31, 2026 • Seasonal</div>
+                <h2><a href="winter-wonderland-gatlinburg.html">Winter Wonderland: Why February is Magic in Gatlinburg</a></h2>
+                <p>Think Gatlinburg is just a summer destination? Think again. Discover why winter in the Smokies offers a magical experience with fewer crowds, cozy cabin vibes, and stunning snow-capped mountains.</p>
+                <a href="winter-wonderland-gatlinburg.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <a href="things-to-do-gatlinburg.html">
+                <img src="../images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg" loading="lazy">
+            </a>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">January 28, 2026 • Local Guide</div>
+                <h2><a href="things-to-do-gatlinburg.html">Top 10 Things to Do Near Classy Bear Cabin</a></h2>
+                <p>From world-class dining to thrilling adventures, discover the best attractions, restaurants, and hidden gems just minutes from your cabin doorstep.</p>
+                <a href="things-to-do-gatlinburg.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <a href="why-guests-love-classy-bear.html">
+                <img src="../images/gallery/loft-view.jpg" alt="Cabin loft with mountain view" loading="lazy">
+            </a>
+            <div class="blog-card-content">
+                <div class="blog-card-meta">January 25, 2026 • Guest Experience</div>
+                <h2><a href="why-guests-love-classy-bear.html">Why Guests Love Classy Bear Cabin</a></h2>
+                <p>Don't just take our word for it. See why guests rave about their stay and keep coming back to our luxury mountain retreat year after year.</p>
+                <a href="why-guests-love-classy-bear.html" class="read-more">Read More →</a>
+            </div>
+        </article>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo">
+                    <p>Your luxury mountain escape in the heart of Gatlinburg.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="../index.html">Home</a>
+                    <a href="../gallery.html">Gallery</a>
+                    <a href="../local-guide.html">Local Guide</a>
+                    <a href="../reviews.html">Reviews</a>
+                    <a href="index.html">Blog</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Gatlinburg, Tennessee</p>
+                    <p>classybearassistant@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Classy Bear Cabin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.nav-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        function openBookingModal() {
+            window.open('https://www.airbnb.com/rooms/736355501162383794', '_blank');
+        }
+    </script>
+</body>
+</html>
