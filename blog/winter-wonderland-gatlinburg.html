@@ -7,205 +7,108 @@
     <meta name="description" content="Discover why winter in Gatlinburg offers magical experiences - fewer crowds, snow-capped mountains, cozy cabin vibes, and unforgettable memories.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #3D3425;
-            background-color: #FFFDF9;
-        }
-        .blog-post-hero {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .blog-post-hero-bg {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-        .blog-post-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-            z-index: -1;
-        }
-        .blog-post-hero h1 {
-            font-family: var(--font-heading);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-        }
-        .blog-post-meta {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        .blog-post-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--color-text);
-        }
-        .blog-post-content h2 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--color-dark);
-            margin: 2.5rem 0 1rem;
-        }
-        .blog-post-content p {
-            margin-bottom: 1.5rem;
-        }
-        .blog-post-content img {
-            width: 100%;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-        .blog-post-content ul, .blog-post-content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
-        }
-        .blog-post-content li {
-            margin-bottom: 0.75rem;
-        }
-        .blog-cta {
-            background: var(--color-cream);
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .blog-cta h3 {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            color: var(--color-dark);
-            margin-bottom: 1rem;
-        }
-        .blog-cta p {
-            margin-bottom: 1.5rem;
-            color: var(--color-text-light);
-        }
-        @media (max-width: 768px) {
-            .blog-post-hero h1 { font-size: 2rem; }
-            .blog-post-content { padding: 2rem 1rem; }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin Logo" class="nav-logo-img">
+                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
             </a>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../gallery.html">Gallery</a></li>
-                <li><a href="../local-guide.html">Local Guide</a></li>
-                <li><a href="../reviews.html">Reviews</a></li>
-                <li><a href="index.html" class="active">Blog</a></li>
-                <li><a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Book Now</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../local-guide.html">Things to Do</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="blog-post-hero">
-        <div class="blog-post-hero-bg" style="background-image: url('../images/gallery/snow-view.jpg');"></div>
-        <div class="blog-post-hero-overlay"></div>
-        <div class="container">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-bg" style="background-image: url('../images/gallery/snow-view.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Seasonal Magic</span>
             <h1>Winter Wonderland: Why February is Magic in Gatlinburg</h1>
-            <p class="blog-post-meta">January 31, 2026 • 6 min read</p>
+            <p>January 31, 2026 • 6 min read</p>
         </div>
     </section>
 
-    <article class="blog-post-content">
-        <p><strong>Think Gatlinburg is just a summer destination?</strong> Think again. While most tourists flock to the Smokies during fall foliage and summer vacation, savvy travelers know that winter offers something truly special — and February might just be the best-kept secret of all.</p>
+    <!-- Blog Content -->
+    <section class="section" style="background: var(--color-white);">
+        <div class="container" style="max-width: 800px;">
+            <article style="font-size: 1.1rem; line-height: 1.9; color: var(--color-text);">
+                
+                <p><strong>Think Gatlinburg is just a summer destination?</strong> Think again. While most tourists flock to the Smokies during fall foliage and summer vacation, savvy travelers know that winter offers something truly special — and February might just be the best-kept secret of all.</p>
 
-        <p>We just woke up to fresh snow blanketing the mountains, and the view from Classy Bear Cabin is absolutely magical. The pine trees dusted with white, the misty valleys below, the quiet serenity that only winter in the mountains can bring. It's the kind of scene that makes you want to curl up with a hot cocoa and never leave.</p>
+                <p>We just woke up to fresh snow blanketing the mountains, and the view from Classy Bear Cabin is absolutely magical. The pine trees dusted with white, the misty valleys below, the quiet serenity that only winter in the mountains can bring.</p>
 
-        <img src="../images/gallery/snow-view-2.jpg" alt="Snowy morning view from cabin">
+                <img src="../images/gallery/snow-view-2.jpg" alt="Snowy morning view from cabin" style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
 
-        <h2>5 Reasons to Visit Gatlinburg in February</h2>
+                <h2 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-dark); margin: 2.5rem 0 1rem;">5 Reasons to Visit Gatlinburg in February</h2>
 
-        <h3>1. Fewer Crowds, More Magic</h3>
-        <p>February is the sweet spot between the holiday rush and spring break madness. Downtown Gatlinburg is pleasantly uncrowded, restaurants don't have hour-long waits, and you can actually enjoy the attractions without fighting through throngs of tourists. It's the Smokies the way they're meant to be experienced.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark); margin: 2rem 0 0.75rem;">1. Fewer Crowds, More Magic</h3>
+                <p>February is the sweet spot between the holiday rush and spring break madness. Downtown Gatlinburg is pleasantly uncrowded, restaurants don't have hour-long waits, and you can actually enjoy the attractions without fighting through crowds.</p>
 
-        <h3>2. Snow-Capped Mountains</h3>
-        <p>The higher elevations of the Smokies regularly receive snow in February, transforming the landscape into a winter wonderland. Even when there's no snow in town, drive up to Newfound Gap or Clingmans Dome (when accessible) for stunning snow scenes. And when it does snow at lower elevations? Pure magic.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark); margin: 2rem 0 0.75rem;">2. Snow-Capped Mountains</h3>
+                <p>The higher elevations of the Smokies regularly receive snow in February, transforming the landscape into a winter wonderland. Even when there's no snow in town, drive up to Newfound Gap for stunning snow scenes.</p>
 
-        <h3>3. Skiing & Snow Tubing at Ober Mountain</h3>
-        <p>Just 1 mile from Classy Bear Cabin, Ober Mountain offers skiing, snowboarding, and the region's best snow tubing. Take the aerial tramway up and spend a day playing in the snow, then come back to the cabin for hot tub time and mountain views.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark); margin: 2rem 0 0.75rem;">3. Skiing & Snow Tubing at Ober Mountain</h3>
+                <p>Just 1 mile from Classy Bear Cabin, Ober Mountain offers skiing, snowboarding, and the region's best snow tubing. Take the aerial tramway up and spend a day playing in the snow!</p>
 
-        <img src="../images/gallery/mountain-view-1.jpg" alt="Ober Mountain view from cabin">
+                <img src="../images/gallery/mountain-view-1.jpg" alt="Ober Mountain view from cabin" style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
 
-        <h3>4. Cozy Cabin Vibes</h3>
-        <p>There's something about winter that makes cabin life even better. The crackling electric fireplaces in every suite, the steam rising from the hot tub against the cold mountain air, the excuse to stay in and play board games or watch movies with your favorite people. Winter is when cabins truly shine.</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark); margin: 2rem 0 0.75rem;">4. Cozy Cabin Vibes</h3>
+                <p>There's something about winter that makes cabin life even better. The crackling electric fireplaces, the steam rising from the hot tub against the cold mountain air, the excuse to stay in and play board games. Winter is when cabins truly shine.</p>
 
-        <h3>5. Better Rates</h3>
-        <p>Let's be honest — February rates are typically lower than peak summer or fall pricing. You get the same stunning cabin, the same incredible views, the same luxury amenities — just at a better value. (Valentine's and Presidents Day weekends excluded, naturally!)</p>
+                <h3 style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--color-dark); margin: 2rem 0 0.75rem;">5. Better Rates</h3>
+                <p>February rates are typically lower than peak summer or fall pricing. You get the same stunning cabin, the same incredible views, just at a better value.</p>
 
-        <img src="../images/gallery/mountain-fog.jpg" alt="Misty mountain morning">
+                <img src="../images/gallery/mountain-fog.jpg" alt="Misty mountain morning" style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
 
-        <h2>What to Do in Gatlinburg This February</h2>
+                <h2 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-dark); margin: 2.5rem 0 1rem;">What to Do in Gatlinburg This February</h2>
 
-        <ul>
-            <li><strong>Ober Mountain</strong> — Skiing, tubing, ice skating, and scenic tramway rides</li>
-            <li><strong>Ole Smoky Moonshine</strong> — Warm up with tastings at this downtown distillery</li>
-            <li><strong>Ripley's Aquarium</strong> — Perfect indoor activity for any weather</li>
-            <li><strong>Scenic Drives</strong> — The Roaring Fork Motor Trail is open and beautiful</li>
-            <li><strong>Downtown Shopping</strong> — Browse the unique shops without the crowds</li>
-            <li><strong>Spa Day</strong> — Several local spas offer couples massages for Valentine's</li>
-        </ul>
+                <ul style="margin: 1.5rem 0; padding-left: 1.5rem;">
+                    <li style="margin-bottom: 0.75rem;"><strong>Ober Mountain</strong> — Skiing, tubing, ice skating, and scenic tramway rides</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Ole Smoky Moonshine</strong> — Warm up with tastings at this downtown distillery</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Ripley's Aquarium</strong> — Perfect indoor activity for any weather</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Scenic Drives</strong> — The Roaring Fork Motor Trail is open and beautiful</li>
+                    <li style="margin-bottom: 0.75rem;"><strong>Downtown Shopping</strong> — Browse the unique shops without the crowds</li>
+                </ul>
 
-        <h2>What to Pack</h2>
+                <div style="background: var(--color-cream); padding: 2.5rem; border-radius: var(--radius-md); text-align: center; margin: 2.5rem 0;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: 1rem;">❄️ Experience Winter Magic</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--color-text-light);">February dates are booking up. Secure your cozy mountain getaway today.</p>
+                    <a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Check Availability</a>
+                </div>
 
-        <p>February in Gatlinburg can range from 30°F to 55°F, so layers are key:</p>
+                <p>Winter in the Smokies isn't a compromise — it's a different kind of magic. We'll leave the fireplace on for you. 🔥</p>
 
-        <ul>
-            <li>Warm jacket and layers</li>
-            <li>Comfortable walking shoes (waterproof is a plus)</li>
-            <li>Gloves, hat, and scarf for cold days</li>
-            <li>Swimsuit (for that hot tub!)</li>
-            <li>Camera — you'll want to capture the views</li>
-        </ul>
-
-        <div class="blog-cta">
-            <h3>❄️ Experience Winter Magic</h3>
-            <p>February dates are booking up. Secure your cozy mountain getaway today.</p>
-            <a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Check Availability</a>
+                <p style="margin-top: 2rem;"><a href="index.html" style="color: var(--color-primary);">← Back to Blog</a></p>
+            </article>
         </div>
-
-        <p>Winter in the Smokies isn't a compromise — it's a different kind of magic. The mountains wear a quiet beauty in February, the pace is slower, and the cabin experience is at its coziest. Come see why the locals say the best time to visit is when everyone else isn't.</p>
-
-        <p>We'll leave the fireplace on for you. 🔥</p>
-    </article>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="../images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo">
-                    <p>Your luxury mountain escape in the heart of Gatlinburg.</p>
+                    <p>Your luxury mountain escape in the heart of Gatlinburg, Tennessee.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Explore</h4>
                     <a href="../index.html">Home</a>
                     <a href="../gallery.html">Gallery</a>
                     <a href="index.html">Blog</a>
@@ -223,9 +126,11 @@
     </footer>
 
     <script>
-        document.querySelector('.nav-toggle')?.addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
         });
         function openBookingModal() {
             window.open('https://www.airbnb.com/rooms/736355501162383794', '_blank');

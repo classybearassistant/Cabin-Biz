@@ -7,244 +7,135 @@
     <meta name="description" content="Discover the best attractions, restaurants, and activities near Classy Bear Cabin in Gatlinburg, TN. Your complete local guide to the Smoky Mountains.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <style>
-        body {
-            font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #3D3425;
-            background-color: #FFFDF9;
-        }
-        .blog-post-hero {
-            position: relative;
-            height: 60vh;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .blog-post-hero-bg {
-            position: absolute;
-            inset: 0;
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-        .blog-post-hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
-            z-index: -1;
-        }
-        .blog-post-hero h1 {
-            font-family: var(--font-heading);
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            max-width: 800px;
-        }
-        .blog-post-meta {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        .blog-post-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem 1.5rem;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--color-text);
-        }
-        .blog-post-content h2 {
-            font-family: var(--font-heading);
-            font-size: 2rem;
-            color: var(--color-dark);
-            margin: 2.5rem 0 1rem;
-        }
-        .blog-post-content h3 {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            color: var(--color-dark);
-            margin: 2rem 0 0.75rem;
-        }
-        .blog-post-content p {
-            margin-bottom: 1.5rem;
-        }
-        .blog-post-content img {
-            width: 100%;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-        .activity-item {
-            background: var(--color-cream);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-        }
-        .activity-item h3 {
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .activity-item .distance {
-            font-size: 0.9rem;
-            color: var(--color-primary);
-            font-weight: 500;
-        }
-        .blog-cta {
-            background: var(--color-cream);
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-        .blog-cta h3 {
-            font-family: var(--font-heading);
-            font-size: 1.8rem;
-            color: var(--color-dark);
-            margin-bottom: 1rem;
-        }
-        .blog-cta p {
-            margin-bottom: 1.5rem;
-            color: var(--color-text-light);
-        }
-        @media (max-width: 768px) {
-            .blog-post-hero h1 { font-size: 2rem; }
-            .blog-post-content { padding: 2rem 1rem; }
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="../index.html" class="nav-logo">
-                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin Logo" class="nav-logo-img">
+                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
             </a>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../gallery.html">Gallery</a></li>
-                <li><a href="../local-guide.html">Local Guide</a></li>
-                <li><a href="../reviews.html">Reviews</a></li>
-                <li><a href="index.html" class="active">Blog</a></li>
-                <li><a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Book Now</a></li>
-            </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../gallery.html">Gallery</a></li>
+                <li><a href="../local-guide.html">Things to Do</a></li>
+                <li><a href="../reviews.html">Reviews</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section class="blog-post-hero">
-        <div class="blog-post-hero-bg" style="background-image: url('../images/gallery/aerial-gatlinburg.jpg');"></div>
-        <div class="blog-post-hero-overlay"></div>
-        <div class="container">
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 60vh;">
+        <div class="hero-bg" style="background-image: url('../images/gallery/aerial-gatlinburg.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-tagline">Local Guide</span>
             <h1>Top 10 Things to Do Near Classy Bear Cabin</h1>
-            <p class="blog-post-meta">January 28, 2026 • 8 min read</p>
+            <p>January 28, 2026 • 8 min read</p>
         </div>
     </section>
 
-    <article class="blog-post-content">
-        <p><strong>Location, location, location.</strong> Classy Bear Cabin isn't just a beautiful retreat — it's perfectly positioned to explore everything the Smoky Mountains have to offer. Just 2 miles from downtown Gatlinburg and 1 mile from Ober Mountain, you're minutes from world-class attractions while enjoying peaceful mountain seclusion.</p>
+    <!-- Blog Content -->
+    <section class="section" style="background: var(--color-white);">
+        <div class="container" style="max-width: 800px;">
+            <article style="font-size: 1.1rem; line-height: 1.9; color: var(--color-text);">
+                
+                <p><strong>Location, location, location.</strong> Classy Bear Cabin isn't just a beautiful retreat — it's perfectly positioned to explore everything the Smoky Mountains have to offer. Just 2 miles from downtown Gatlinburg and 1 mile from Ober Mountain, you're minutes from world-class attractions while enjoying peaceful mountain seclusion.</p>
 
-        <p>Here are our top picks for must-do experiences during your stay:</p>
+                <img src="../images/gallery/rainbow.jpg" alt="Rainbow over the Smoky Mountains" style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
 
-        <img src="../images/gallery/rainbow.jpg" alt="Rainbow over the Smoky Mountains">
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">1. 🎿 Ober Mountain</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">1 mile from cabin</p>
+                    <p style="margin: 0;">Take the aerial tramway for stunning views, then enjoy skiing, snowboarding, snow tubing (winter), or the alpine slide and wildlife encounter (year-round).</p>
+                </div>
 
-        <div class="activity-item">
-            <h3>1. 🎿 Ober Mountain</h3>
-            <p class="distance">1 mile from cabin</p>
-            <p>Take the aerial tramway from downtown for stunning views, then enjoy skiing, snowboarding, snow tubing (winter), or the alpine slide and wildlife encounter (year-round). The scenic chairlift offers incredible mountain vistas any season.</p>
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">2. 🏞️ Great Smoky Mountains National Park</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">5 minutes to park entrance</p>
+                    <p style="margin: 0;">America's most-visited national park is literally in your backyard. Hike to waterfalls, spot wildlife, or take scenic drives. Entry is free!</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">3. 🥃 Ole Smoky Moonshine</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">2 miles (downtown)</p>
+                    <p style="margin: 0;">Tennessee's first legal moonshine distillery offers free tastings. The apple pie moonshine is legendary!</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">4. 🐠 Ripley's Aquarium of the Smokies</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">2 miles (downtown)</p>
+                    <p style="margin: 0;">One of the best aquariums in America, featuring a 340-foot underwater tunnel. Perfect for families!</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">5. 🍽️ The Peddler Steakhouse</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">2 miles</p>
+                    <p style="margin: 0;">A Gatlinburg institution since 1976. Pro tip: They deliver to cabins!</p>
+                </div>
+
+                <img src="../images/gallery/deck-view-1.jpg" alt="Mountain views from Classy Bear Cabin" style="width: 100%; border-radius: var(--radius-md); margin: 2rem 0;">
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">6. 🛍️ The Village Shops</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">2 miles (downtown)</p>
+                    <p style="margin: 0;">27 unique shops in a charming European-style village. Perfect for unique souvenirs.</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">7. 🎭 Dollywood</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">15 miles</p>
+                    <p style="margin: 0;">Dolly Parton's famous theme park offers world-class rides, shows, and Southern hospitality.</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">8. 🌿 Roaring Fork Motor Nature Trail</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">3 miles to entrance</p>
+                    <p style="margin: 0;">Stunning 5.5-mile one-way loop through old-growth forest past historic cabins and rushing streams.</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">9. 🍷 Sugarlands Distilling Company</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">3 miles</p>
+                    <p style="margin: 0;">Award-winning craft spirits with a welcoming tasting room. Try the Butter Pecan Sippin' Cream!</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 1.5rem; border-radius: var(--radius-md); margin-bottom: 1.5rem;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin: 0 0 0.5rem;">10. 🌄 Clingmans Dome</h3>
+                    <p style="color: var(--color-primary); font-weight: 500; font-size: 0.9rem; margin-bottom: 0.5rem;">25 miles</p>
+                    <p style="margin: 0;">The highest point in the Smokies (6,643 ft) offers 360-degree views. On clear days, see for 100 miles!</p>
+                </div>
+
+                <div style="background: var(--color-cream); padding: 2.5rem; border-radius: var(--radius-md); text-align: center; margin: 2.5rem 0;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: var(--color-dark); margin-bottom: 1rem;">🏔️ Your Adventure Awaits</h3>
+                    <p style="margin-bottom: 1.5rem; color: var(--color-text-light);">Book your stay at Classy Bear Cabin and experience the best of Gatlinburg.</p>
+                    <a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Check Availability</a>
+                </div>
+
+                <p style="margin-top: 2rem;"><a href="index.html" style="color: var(--color-primary);">← Back to Blog</a></p>
+            </article>
         </div>
-
-        <div class="activity-item">
-            <h3>2. 🏞️ Great Smoky Mountains National Park</h3>
-            <p class="distance">5 minutes to park entrance</p>
-            <p>America's most-visited national park is literally in your backyard. Hike to waterfalls, spot wildlife, drive scenic routes like Roaring Fork Motor Nature Trail, or just pull over and soak in the views. Entry is free!</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>3. 🥃 Ole Smoky Moonshine</h3>
-            <p class="distance">2 miles (downtown)</p>
-            <p>Tennessee's first legal moonshine distillery offers free tastings of their famous white lightning and flavored moonshines. Watch the distilling process and grab a jar to take home. The apple pie moonshine is legendary.</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>4. 🐠 Ripley's Aquarium of the Smokies</h3>
-            <p class="distance">2 miles (downtown)</p>
-            <p>One of the best aquariums in America, featuring a 340-foot underwater tunnel, touch tanks, and incredible marine life. Perfect for families and a great rainy-day activity.</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>5. 🍽️ The Peddler Steakhouse</h3>
-            <p class="distance">2 miles</p>
-            <p>A Gatlinburg institution since 1976. Their aged steaks and famous salad bar are worth the visit. Pro tip: They deliver to cabins — perfect for a special dinner in!</p>
-        </div>
-
-        <img src="../images/gallery/deck-view-1.jpg" alt="Mountain views from Classy Bear Cabin">
-
-        <div class="activity-item">
-            <h3>6. 🛍️ The Village Shops</h3>
-            <p class="distance">2 miles (downtown)</p>
-            <p>27 unique shops in a charming European-style village. From handmade crafts to gourmet foods to Christmas decorations year-round, it's the perfect place to find unique souvenirs.</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>7. 🎭 Dollywood</h3>
-            <p class="distance">15 miles</p>
-            <p>Dolly Parton's famous theme park in nearby Pigeon Forge offers world-class rides, shows, and Southern hospitality. Their holiday festivals (especially Christmas) are spectacular.</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>8. 🌿 Roaring Fork Motor Nature Trail</h3>
-            <p class="distance">3 miles to entrance</p>
-            <p>This stunning 5.5-mile one-way loop road takes you through old-growth forest past historic cabins and rushing streams. Stop for short hikes to waterfalls like Grotto Falls (2.6 miles round trip).</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>9. 🍷 Sugarlands Distilling Company</h3>
-            <p class="distance">3 miles</p>
-            <p>Award-winning craft spirits with a welcoming tasting room. Their Butter Pecan Sippin' Cream is dangerously delicious. Free tours available.</p>
-        </div>
-
-        <div class="activity-item">
-            <h3>10. 🌄 Clingmans Dome</h3>
-            <p class="distance">25 miles</p>
-            <p>The highest point in the Smokies (6,643 ft) offers 360-degree views from the observation tower. On clear days, you can see for 100 miles. Note: Road closed December-March.</p>
-        </div>
-
-        <h2>Pro Tips from Your Hosts</h2>
-
-        <ul>
-            <li><strong>Beat the crowds:</strong> Visit popular attractions early morning or late afternoon</li>
-            <li><strong>Parking hack:</strong> Use the Gatlinburg trolley system ($2) to avoid downtown parking hassles</li>
-            <li><strong>Best sunset spot:</strong> Right from your cabin deck, honestly!</li>
-            <li><strong>Grocery run:</strong> There's a Publix in Pigeon Forge (15 min) for cabin meal supplies</li>
-        </ul>
-
-        <div class="blog-cta">
-            <h3>🏔️ Your Adventure Awaits</h3>
-            <p>Book your stay at Classy Bear Cabin and experience the best of Gatlinburg.</p>
-            <a href="#" class="btn btn-primary" onclick="openBookingModal(); return false;">Check Availability</a>
-        </div>
-    </article>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="../images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo">
-                    <p>Your luxury mountain escape in the heart of Gatlinburg.</p>
+                    <p>Your luxury mountain escape in the heart of Gatlinburg, Tennessee.</p>
                 </div>
                 <div class="footer-links">
-                    <h4>Quick Links</h4>
+                    <h4>Explore</h4>
                     <a href="../index.html">Home</a>
                     <a href="../gallery.html">Gallery</a>
                     <a href="index.html">Blog</a>
@@ -262,9 +153,11 @@
     </footer>
 
     <script>
-        document.querySelector('.nav-toggle')?.addEventListener('click', function() {
-            document.querySelector('.nav-menu').classList.toggle('active');
-            this.classList.toggle('active');
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
         });
         function openBookingModal() {
             window.open('https://www.airbnb.com/rooms/736355501162383794', '_blank');
