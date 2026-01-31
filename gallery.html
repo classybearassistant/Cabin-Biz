@@ -25,11 +25,21 @@
             color: var(--color-text-light);
             font-size: 1.1rem;
         }
+        .gallery-section {
+            padding: 2rem 0;
+        }
+        .gallery-section h2 {
+            text-align: center;
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--color-dark);
+            margin-bottom: 1.5rem;
+        }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1.5rem;
-            padding: 3rem;
+            padding: 0 3rem 3rem;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -115,12 +125,10 @@
         @media (max-width: 768px) {
             .gallery-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                padding: 1rem;
+                padding: 0 1rem 2rem;
                 gap: 1rem;
             }
-            .gallery-hero h1 {
-                font-size: 2rem;
-            }
+            .gallery-hero h1 { font-size: 2rem; }
         }
     </style>
 </head>
@@ -153,66 +161,137 @@
         </div>
     </section>
 
-    <section class="gallery-grid">
-        <div class="gallery-item" onclick="openLightbox(0)">
-            <img src="images/gallery/rainbow.jpg" alt="Rainbow over the Smoky Mountains" loading="lazy">
-            <div class="caption">Rainbow over the Smokies</div>
+    <!-- Exterior & Views -->
+    <section class="gallery-section">
+        <h2>🏔️ The Cabin & Views</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="images/gallery/cabin-sign.jpg" alt="Classy Bear Cabin entrance sign" loading="lazy">
+                <div class="caption">Welcome to Classy Bear Cabin</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="images/gallery/cabin-exterior-drone.jpg" alt="Aerial view of cabin" loading="lazy">
+                <div class="caption">Aerial View</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="images/gallery/cabin-drone-front.jpg" alt="Cabin front drone shot" loading="lazy">
+                <div class="caption">A-Frame Windows & Decks</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="images/gallery/cabin-entrance.jpg" alt="Cabin exterior" loading="lazy">
+                <div class="caption">Cabin Exterior</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="images/gallery/cabin-neighborhood.jpg" alt="Mountain cabin community" loading="lazy">
+                <div class="caption">Nestled in the Mountains</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="images/gallery/rainbow.jpg" alt="Rainbow over mountains" loading="lazy">
+                <div class="caption">Rainbow Over the Smokies</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="images/gallery/rainbow-2.jpg" alt="Another rainbow view" loading="lazy">
+                <div class="caption">Mountain Rainbow</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="images/gallery/moonrise.jpg" alt="Moonrise over mountains" loading="lazy">
+                <div class="caption">Moonrise Over the Smokies</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg" loading="lazy">
+                <div class="caption">Gatlinburg & the Smokies</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="images/gallery/mountain-fog.jpg" alt="Misty mountain morning" loading="lazy">
+                <div class="caption">Misty Mountain Morning</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="images/gallery/deck-view-1.jpg" alt="Deck view" loading="lazy">
+                <div class="caption">Morning Coffee View</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="images/gallery/deck-view-2.jpg" alt="Panoramic mountain view" loading="lazy">
+                <div class="caption">Panoramic Views</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="images/gallery/summer-deck.jpg" alt="Summer deck view" loading="lazy">
+                <div class="caption">Summer on the Deck</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="images/gallery/mountain-view-1.jpg" alt="Ober Mountain" loading="lazy">
+                <div class="caption">Ober Mountain View</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="images/gallery/mountain-view-2.jpg" alt="Mountain panorama" loading="lazy">
+                <div class="caption">Smoky Mountain Panorama</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="images/gallery/mountain-view-3.jpg" alt="Layered mountains" loading="lazy">
+                <div class="caption">Mountain Layers</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="images/gallery/snow-view.jpg" alt="Winter view" loading="lazy">
+                <div class="caption">Winter Wonderland</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="images/gallery/snow-view-2.jpg" alt="Snowy morning" loading="lazy">
+                <div class="caption">Snowy Morning</div>
+            </div>
         </div>
-        <div class="gallery-item" onclick="openLightbox(1)">
-            <img src="images/gallery/mountain-fog.jpg" alt="Misty mountain morning" loading="lazy">
-            <div class="caption">Misty Mountain Morning</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(2)">
-            <img src="images/gallery/deck-view-2.jpg" alt="Deck with panoramic views" loading="lazy">
-            <div class="caption">Deck with Panoramic Views</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(3)">
-            <img src="images/gallery/deck-view-1.jpg" alt="Morning coffee view" loading="lazy">
-            <div class="caption">Morning Coffee View</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(4)">
-            <img src="images/gallery/kitchen-2.jpg" alt="Gourmet kitchen" loading="lazy">
-            <div class="caption">Gourmet Kitchen</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(5)">
-            <img src="images/gallery/kitchen-1.jpg" alt="Kitchen details" loading="lazy">
-            <div class="caption">Kitchen Details</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(6)">
-            <img src="images/gallery/loft-view.jpg" alt="Loft with mountain views" loading="lazy">
-            <div class="caption">Loft with Mountain Views</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(7)">
-            <img src="images/gallery/bathroom-1.jpg" alt="Spa-like bathroom" loading="lazy">
-            <div class="caption">Spa-Like Bathroom</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(8)">
-            <img src="images/gallery/bathroom-2.jpg" alt="Luxury bathroom" loading="lazy">
-            <div class="caption">Luxury Bathroom</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(9)">
-            <img src="images/gallery/bedroom-tv.jpg" alt="Bedroom with electric fireplace" loading="lazy">
-            <div class="caption">Bedroom with Electric Fireplace</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(10)">
-            <img src="images/gallery/mountain-view-1.jpg" alt="Ober Mountain view" loading="lazy">
-            <div class="caption">Ober Mountain View</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(11)">
-            <img src="images/gallery/mountain-view-2.jpg" alt="Smoky Mountain panorama" loading="lazy">
-            <div class="caption">Smoky Mountain Panorama</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(12)">
-            <img src="images/gallery/mountain-view-3.jpg" alt="Mountain layers" loading="lazy">
-            <div class="caption">Mountain Layers</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(13)">
-            <img src="images/gallery/snow-view.jpg" alt="Winter wonderland" loading="lazy">
-            <div class="caption">Winter Wonderland</div>
-        </div>
-        <div class="gallery-item" onclick="openLightbox(14)">
-            <img src="images/gallery/snow-view-2.jpg" alt="Snowy morning" loading="lazy">
-            <div class="caption">Snowy Morning</div>
+    </section>
+
+    <!-- Interior -->
+    <section class="gallery-section">
+        <h2>🏠 Interior & Amenities</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="images/gallery/loft-view.jpg" alt="Loft with mountain view" loading="lazy">
+                <div class="caption">Loft with Views</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="images/gallery/loft-view-2.jpg" alt="A-frame windows" loading="lazy">
+                <div class="caption">Stunning A-Frame Windows</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(20)">
+                <img src="images/gallery/kitchen-1.jpg" alt="Kitchen backsplash" loading="lazy">
+                <div class="caption">Herringbone Backsplash</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(21)">
+                <img src="images/gallery/kitchen-2.jpg" alt="Full kitchen" loading="lazy">
+                <div class="caption">Gourmet Kitchen</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(22)">
+                <img src="images/gallery/kitchen-3.jpg" alt="Kitchen cooktop" loading="lazy">
+                <div class="caption">Fully Equipped</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(23)">
+                <img src="images/gallery/bedroom-bear.jpg" alt="Master bedroom" loading="lazy">
+                <div class="caption">Master Suite</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(24)">
+                <img src="images/gallery/bedroom-highland.jpg" alt="Bedroom with highland cow art" loading="lazy">
+                <div class="caption">Highland Suite</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(25)">
+                <img src="images/gallery/bedroom-2.jpg" alt="Cozy bedroom" loading="lazy">
+                <div class="caption">Cozy Bedroom</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(26)">
+                <img src="images/gallery/bedroom-tv.jpg" alt="Bedroom with fireplace" loading="lazy">
+                <div class="caption">Electric Fireplace</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(27)">
+                <img src="images/gallery/bathroom-1.jpg" alt="Spa bathroom" loading="lazy">
+                <div class="caption">Spa-Like Bathroom</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(28)">
+                <img src="images/gallery/bathroom-2.jpg" alt="Luxury bathroom" loading="lazy">
+                <div class="caption">Luxury Finishes</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(29)">
+                <img src="images/gallery/hot-tub.jpg" alt="Hot tub with view" loading="lazy">
+                <div class="caption">Hot Tub with Mountain Views</div>
+            </div>
         </div>
     </section>
 
@@ -253,21 +332,36 @@
 
     <script>
         const images = [
+            'images/gallery/cabin-sign.jpg',
+            'images/gallery/cabin-exterior-drone.jpg',
+            'images/gallery/cabin-drone-front.jpg',
+            'images/gallery/cabin-entrance.jpg',
+            'images/gallery/cabin-neighborhood.jpg',
             'images/gallery/rainbow.jpg',
+            'images/gallery/rainbow-2.jpg',
+            'images/gallery/moonrise.jpg',
+            'images/gallery/aerial-gatlinburg.jpg',
             'images/gallery/mountain-fog.jpg',
-            'images/gallery/deck-view-2.jpg',
             'images/gallery/deck-view-1.jpg',
-            'images/gallery/kitchen-2.jpg',
-            'images/gallery/kitchen-1.jpg',
-            'images/gallery/loft-view.jpg',
-            'images/gallery/bathroom-1.jpg',
-            'images/gallery/bathroom-2.jpg',
-            'images/gallery/bedroom-tv.jpg',
+            'images/gallery/deck-view-2.jpg',
+            'images/gallery/summer-deck.jpg',
             'images/gallery/mountain-view-1.jpg',
             'images/gallery/mountain-view-2.jpg',
             'images/gallery/mountain-view-3.jpg',
             'images/gallery/snow-view.jpg',
-            'images/gallery/snow-view-2.jpg'
+            'images/gallery/snow-view-2.jpg',
+            'images/gallery/loft-view.jpg',
+            'images/gallery/loft-view-2.jpg',
+            'images/gallery/kitchen-1.jpg',
+            'images/gallery/kitchen-2.jpg',
+            'images/gallery/kitchen-3.jpg',
+            'images/gallery/bedroom-bear.jpg',
+            'images/gallery/bedroom-highland.jpg',
+            'images/gallery/bedroom-2.jpg',
+            'images/gallery/bedroom-tv.jpg',
+            'images/gallery/bathroom-1.jpg',
+            'images/gallery/bathroom-2.jpg',
+            'images/gallery/hot-tub.jpg'
         ];
         let currentIndex = 0;
 
