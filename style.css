@@ -957,6 +957,7 @@ a.attraction:hover {
     .hero-features {
         flex-direction: column;
         gap: var(--space-xs);
+        align-items: center;
     }
     
     .about-stats {
