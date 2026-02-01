@@ -659,6 +659,65 @@ a.attraction:hover {
 }
 
 /* =========================================
+   Book Direct Section
+   ========================================= */
+.book-direct {
+    padding: var(--space-xl) 0;
+    background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-white) 100%);
+}
+
+.book-direct-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.book-direct-card {
+    background: var(--color-white);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.book-direct-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.book-direct-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.book-direct-card h4 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark);
+}
+
+.book-direct-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .book-direct-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .book-direct-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
    CTA Section
    ========================================= */
 .cta {
@@ -1129,4 +1188,38 @@ a.attraction:hover {
 
 .booking-modal-close:hover {
     color: var(--color-primary);
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-stone);
+}
+
+.trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}
+
+.trust-badge svg {
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.trust-badge.payment-cards {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.trust-badge.payment-cards svg {
+    opacity: 0.8;
 }
