@@ -1217,9 +1217,29 @@ a.attraction:hover {
 
 .trust-badge.payment-cards {
     display: flex;
-    gap: 0.4rem;
+    gap: 0.5rem;
 }
 
-.trust-badge.payment-cards svg {
-    opacity: 0.8;
+.card-brand {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card-brand.visa {
+    background: #1a1f71;
+    color: #fff;
+}
+
+.card-brand.mastercard {
+    background: linear-gradient(90deg, #eb001b 0%, #f79e1b 100%);
+    color: #fff;
+}
+
+.card-brand.amex {
+    background: #006fcf;
+    color: #fff;
 }
