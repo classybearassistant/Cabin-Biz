@@ -851,6 +851,30 @@ a.attraction:hover {
     color: var(--color-white);
 }
 
+.footer-socials {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+.footer-socials a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-socials a:hover {
+    color: var(--color-white);
+    transform: scale(1.1);
+}
+
+.footer-socials svg {
+    width: 28px;
+    height: 28px;
+}
+
 .footer-bottom {
     text-align: center;
     padding-top: var(--space-md);
