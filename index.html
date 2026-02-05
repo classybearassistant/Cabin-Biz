@@ -140,8 +140,8 @@
     <style>
         /* Book Direct Banner */
         .top-banner {
-            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
-            color: var(--color-white);
+            background: linear-gradient(135deg, #1E3D32 0%, #2D5A4A 100%);
+            color: white;
             text-align: center;
             padding: 0.6rem 1rem;
             font-weight: 600;
@@ -154,7 +154,7 @@
             z-index: 1002;
         }
         .top-banner span {
-            color: #FFD700;
+            color: #E8B44C;
         }
         body.has-banner .navbar {
             top: 38px;
@@ -330,15 +330,104 @@
             }
         }
         
-        /* Hero availability text */
-        .hero-availability {
-            margin-top: 1.5rem;
-            font-size: 0.95rem;
+        /* New Conversion-Focused Hero */
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 0.5rem;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+        .hero-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero-rating .stars {
+            color: #E8B44C;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+        }
+        .hero-rating .rating-text {
+            font-size: 1rem;
             opacity: 0.9;
-            background: rgba(0,0,0,0.3);
-            padding: 0.5rem 1rem;
-            border-radius: var(--radius-sm);
+        }
+        .hero-price {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem 2rem;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-price .price-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .hero-price .price-amount {
+            font-size: 2.5rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        .hero-price .price-unit {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        .hero-price .price-save {
+            background: #E8B44C;
+            color: #1A1A1A;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+        }
+        .btn-hero-cta {
             display: inline-block;
+            background: #E8B44C;
+            color: #1A1A1A;
+            padding: 1.25rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(232, 180, 76, 0.4);
+        }
+        .btn-hero-cta:hover {
+            background: #F5C65A;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(232, 180, 76, 0.5);
+            color: #1A1A1A;
+        }
+        .hero-trust {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        @media (max-width: 600px) {
+            .hero-price {
+                padding: 1rem 1.5rem;
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+            .hero-price .price-save {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+            .btn-hero-cta {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
         }
 
         /* Sticky CTA Bar */
@@ -347,7 +436,7 @@
             bottom: -80px;
             left: 0;
             right: 0;
-            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            background: linear-gradient(135deg, #1E3D32 0%, #2D5A4A 100%);
             color: white;
             padding: 0.75rem 1rem;
             z-index: 999;
@@ -367,8 +456,8 @@
             flex-wrap: wrap;
         }
         .sticky-cta-btn {
-            background: #FFD700;
-            color: var(--color-dark);
+            background: #E8B44C;
+            color: #1A1A1A;
             border: none;
             padding: 0.6rem 1.5rem;
             border-radius: 25px;
@@ -378,7 +467,7 @@
         }
         .sticky-cta-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(255,215,0,0.4);
+            box-shadow: 0 4px 15px rgba(232,180,76,0.4);
         }
         @media (max-width: 600px) {
             .sticky-cta-content {
@@ -534,7 +623,7 @@
         .contact-bar-btn {
             width: 50px;
             height: 50px;
-            background: var(--color-primary);
+            background: #2D5A4A;
             color: white;
             border-radius: 50%;
             display: flex;
@@ -544,7 +633,7 @@
             transition: transform 0.2s, background 0.2s;
         }
         .contact-bar-btn:hover {
-            background: var(--color-primary-dark);
+            background: #1E3D32;
             transform: scale(1.1);
             color: white;
         }
@@ -599,25 +688,29 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg" style="background-image: url('images/hero-summit-view.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('images/hero-deck-view.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span class="hero-tagline">Summit Views. Luxury Comfort.</span>
             <h1>Classy Bear Cabin</h1>
-            <p>A stunning luxury log cabin retreat nestled in the beauty of the Great Smoky Mountains</p>
-            <div class="hero-features">
-                <span>🏔️ Mountain Views</span>
-                <span>👥 Sleeps 6</span> <span>👶 +3 Kids</span>
-                <span style="display:inline-flex;align-items:center;gap:0.3em;"><img src="images/hot-tub.svg" alt="Hot Tub" style="width:1.2em;height:1.2em;">Hot Tub</span>
+            <p class="hero-subtitle">Luxury Gatlinburg Cabin · Sleeps 9 · Private Hot Tub</p>
+            
+            <div class="hero-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.76 rating · 148+ reviews</span>
             </div>
-            <a href="#" class="btn btn-primary btn-large" onclick="openBookingModal(); return false;">Check Availability</a>
-            <div class="hero-availability">
-                📅 Current availability: <strong>Feb 10-14, Feb 20-28, Mar 3-8</strong>
+            
+            <div class="hero-price">
+                <span class="price-label">From</span>
+                <span class="price-amount">$340</span>
+                <span class="price-unit">/night direct</span>
+                <span class="price-save">Save 15% vs Airbnb</span>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-arrow"></div>
+            
+            <a href="#" class="btn-hero-cta" onclick="openBookingModal(); return false;">
+                Check Availability
+            </a>
+            
+            <p class="hero-trust">✓ Free cancellation · ✓ Instant confirmation · ✓ Best price guaranteed</p>
         </div>
     </section>
 

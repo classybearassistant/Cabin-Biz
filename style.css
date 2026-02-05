@@ -4,24 +4,24 @@
 
 /* CSS Variables */
 :root {
-    /* Warm Earth Tones */
-    --color-primary: #8B5A2B;      /* Warm brown */
-    --color-primary-dark: #5D3A1A;  /* Darker brown */
-    --color-primary-light: #A67C52; /* Lighter brown */
-    --color-accent: #D4A574;        /* Golden tan */
-    --color-accent-light: #E8D4B8;  /* Cream */
+    /* Modern Mountain Palette */
+    --color-primary: #2D5A4A;       /* Deep forest teal */
+    --color-primary-dark: #1E3D32;  /* Darker teal */
+    --color-primary-light: #4A7C6A; /* Lighter teal */
+    --color-accent: #E8B44C;        /* Warm gold */
+    --color-accent-light: #F5D998;  /* Light gold */
     
     /* Neutrals */
-    --color-dark: #2C2416;          /* Almost black brown */
-    --color-text: #3D3425;          /* Dark brown text */
-    --color-text-light: #6B5D4D;    /* Muted brown */
-    --color-white: #FFFDF9;         /* Warm white */
-    --color-cream: #FAF6F0;         /* Cream background */
-    --color-stone: #E8E2D9;         /* Stone gray */
+    --color-dark: #1A1A1A;          /* Near black */
+    --color-text: #2D2D2D;          /* Dark gray text */
+    --color-text-light: #666666;    /* Muted gray */
+    --color-white: #FFFFFF;         /* Pure white */
+    --color-cream: #F8F9FA;         /* Light gray background */
+    --color-stone: #E5E7EB;         /* Stone gray */
     
     /* Greens for nature accents */
-    --color-forest: #4A5D4A;        /* Forest green */
-    --color-sage: #9CAF88;          /* Sage green */
+    --color-forest: #2D5A4A;        /* Forest green (same as primary) */
+    --color-sage: #7BA38F;          /* Sage green */
     
     /* Spacing */
     --space-xs: 0.5rem;
