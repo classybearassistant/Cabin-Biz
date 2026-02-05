@@ -62,10 +62,20 @@
         }
         .calculator-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            max-width: 900px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
             margin: 0 auto;
+        }
+        .ota-boxes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        @media (max-width: 900px) {
+            .ota-boxes {
+                grid-template-columns: 1fr;
+            }
         }
         .price-box {
             background: white;
@@ -128,7 +138,7 @@
             padding: 2rem;
             border-radius: var(--radius-md);
             margin-top: 2rem;
-            max-width: 900px;
+            max-width: 1100px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -425,24 +435,71 @@
             </div>
 
             <div class="calculator-grid">
-                <!-- Airbnb Price -->
-                <div class="price-box airbnb">
-                    <h3>🏠 Airbnb Price</h3>
-                    <div class="price-line">
-                        <span class="label">$400/night × 2 nights</span>
-                        <span class="value">$800</span>
-                    </div>
-                    <div class="price-line">
-                        <span class="label">Service fee</span>
-                        <span class="value">$140</span>
-                    </div>
-                    <div class="price-line">
-                        <span class="label">Taxes</span>
-                        <span class="value">$120</span>
-                    </div>
-                    <div class="price-line total">
-                        <span class="label">TOTAL</span>
-                        <span class="value">$1,060</span>
+                <!-- OTA Prices Column -->
+                <div class="ota-column">
+                    <div class="ota-boxes">
+                        <!-- Airbnb Price -->
+                        <div class="price-box airbnb">
+                            <h3>🏠 Airbnb</h3>
+                            <div class="price-line">
+                                <span class="label">$400/night × 2</span>
+                                <span class="value">$800</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Service fee</span>
+                                <span class="value">$140</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Taxes</span>
+                                <span class="value">$120</span>
+                            </div>
+                            <div class="price-line total">
+                                <span class="label">TOTAL</span>
+                                <span class="value">$1,060</span>
+                            </div>
+                        </div>
+
+                        <!-- VRBO Price -->
+                        <div class="price-box vrbo" style="border-top-color: #3b5998;">
+                            <h3>🏡 VRBO</h3>
+                            <div class="price-line">
+                                <span class="label">$400/night × 2</span>
+                                <span class="value">$800</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Service fee</span>
+                                <span class="value">$120</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Taxes</span>
+                                <span class="value">$120</span>
+                            </div>
+                            <div class="price-line total">
+                                <span class="label">TOTAL</span>
+                                <span class="value">$1,040</span>
+                            </div>
+                        </div>
+
+                        <!-- Booking.com Price -->
+                        <div class="price-box booking" style="border-top-color: #003580;">
+                            <h3>🌐 Booking.com</h3>
+                            <div class="price-line">
+                                <span class="label">$400/night × 2</span>
+                                <span class="value">$800</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Service fee</span>
+                                <span class="value">$0</span>
+                            </div>
+                            <div class="price-line">
+                                <span class="label">Taxes</span>
+                                <span class="value">$120</span>
+                            </div>
+                            <div class="price-line total">
+                                <span class="label">TOTAL</span>
+                                <span class="value">$920</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -450,7 +507,7 @@
                 <div class="price-box direct">
                     <h3>✨ Classy Bear Direct</h3>
                     <div class="price-line discount">
-                        <span class="label">$340/night × 2 nights <small>(15% off!)</small></span>
+                        <span class="label">$340/night × 2 <small>(15% off!)</small></span>
                         <span class="value">$680</span>
                     </div>
                     <div class="price-line">
@@ -465,13 +522,22 @@
                         <span class="label">TOTAL</span>
                         <span class="value">$782</span>
                     </div>
+                    <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--color-stone); text-align: center;">
+                        <div style="font-size: 0.85rem; color: var(--color-text-light);">You save vs Airbnb</div>
+                        <div style="font-size: 1.5rem; font-weight: 700; color: var(--color-forest);">$278</div>
+                    </div>
                 </div>
             </div>
 
             <div class="savings-banner">
-                <div class="amount">YOU SAVE: $278</div>
+                <div class="amount">SAVE UP TO $278</div>
                 <p>That's a nice dinner out in Gatlinburg! 🍽️</p>
-                <p style="font-size: 0.9rem; opacity: 0.85; margin-top: 0.5rem;">*Prices vary by season. Peak season savings are even higher!</p>
+                <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; flex-wrap: wrap;">
+                    <span>vs Airbnb: <strong>$278</strong></span>
+                    <span>vs VRBO: <strong>$258</strong></span>
+                    <span>vs Booking: <strong>$138</strong></span>
+                </div>
+                <p style="font-size: 0.9rem; opacity: 0.85; margin-top: 0.75rem;">*Prices vary by season. Peak season savings are even higher!</p>
             </div>
         </div>
     </section>
