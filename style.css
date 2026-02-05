@@ -68,7 +68,7 @@ body {
     line-height: 1.8;
     font-weight: 400;
     color: var(--color-text);
-    background-color: var(--color-white);
+    background-color: #FAF8F3;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 0.01em;
