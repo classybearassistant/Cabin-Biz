@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book direct at Classy Bear Cabin and save 15% plus avoid OTA service fees. See real savings examples, guest reviews, and book your Gatlinburg cabin getaway.">
+    <meta name="keywords" content="book direct cabin, Gatlinburg cabin discount, save on cabin rental, Classy Bear Cabin booking, no service fees">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://classybearcabin.com/book-direct">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://classybearcabin.com/book-direct">
+    <meta property="og:title" content="Book Direct & Save 15% | Classy Bear Cabin">
+    <meta property="og:description" content="Smart travelers book direct and save $278+ on a 2-night stay. No OTA fees, flexible policies, direct owner contact.">
+    <meta property="og:image" content="https://classybearcabin.com/images/hero-summit-view.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book Direct & Save 15% | Classy Bear Cabin">
+    <meta name="twitter:description" content="Smart travelers book direct and save $278+ on a 2-night stay. No OTA fees, flexible policies, direct owner contact.">
+    <meta name="twitter:image" content="https://classybearcabin.com/images/hero-summit-view.jpg">
+    
+    <title>Why Book Direct & Save 15% | Classy Bear Cabin Gatlinburg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ370T5T66"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HJ370T5T66');
+    </script>
+
+    <style>
+        /* Book Direct Page Styles */
+        .page-hero {
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            color: white;
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        .page-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .page-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Savings Calculator */
+        .savings-section {
+            padding: 4rem 0;
+            background: var(--color-cream);
+        }
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .price-box {
+            background: white;
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        .price-box.airbnb {
+            border-top: 4px solid #FF5A5F;
+        }
+        .price-box.direct {
+            border-top: 4px solid var(--color-forest);
+            position: relative;
+        }
+        .price-box.direct::before {
+            content: "BEST VALUE";
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--color-forest);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+        }
+        .price-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .price-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--color-stone);
+        }
+        .price-line:last-of-type {
+            border-bottom: none;
+        }
+        .price-line.total {
+            font-weight: 700;
+            font-size: 1.25rem;
+            border-top: 2px solid var(--color-dark);
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+        }
+        .price-line .label {
+            color: var(--color-text-light);
+        }
+        .price-line.discount .value {
+            color: var(--color-forest);
+        }
+        .savings-banner {
+            background: linear-gradient(135deg, var(--color-forest) 0%, #3a7c23 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            margin-top: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .savings-banner .amount {
+            font-size: 3rem;
+            font-weight: 700;
+            font-family: var(--font-heading);
+        }
+        .savings-banner p {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        .example-dates {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: var(--radius-sm);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .example-dates .label {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .example-dates .dates {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-dark);
+        }
+        @media (max-width: 768px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 4rem 0;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--color-cream);
+            border-radius: var(--radius-sm);
+        }
+        .benefit-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .benefit-text h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        .benefit-text p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+        }
+        @media (max-width: 600px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* How to Book Section */
+        .how-to-book {
+            padding: 4rem 0;
+            background: var(--color-cream);
+        }
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 3rem;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+        }
+        .step:not(:last-child)::after {
+            content: "→";
+            position: absolute;
+            right: -1.25rem;
+            top: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+        .step-number {
+            width: 3rem;
+            height: 3rem;
+            background: var(--color-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin: 0 auto 1rem;
+        }
+        .step h4 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .step p {
+            font-size: 0.875rem;
+            color: var(--color-text-light);
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .step:not(:last-child)::after {
+                display: none;
+            }
+        }
+        @media (max-width: 480px) {
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .booking-widget-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 4rem 0;
+        }
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--color-primary);
+        }
+        .review-stars {
+            color: #FFB800;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .review-text {
+            font-style: italic;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        .review-author {
+            font-weight: 600;
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+        }
+        .review-source {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Contact Section */
+        .questions-section {
+            padding: 4rem 0;
+            background: var(--color-cream);
+        }
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-method {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+        .contact-method-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .contact-method h4 {
+            margin-bottom: 0.5rem;
+        }
+        .contact-method a {
+            color: var(--color-primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .response-time {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: var(--radius-sm);
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .response-time .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--color-forest);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book-direct.html" class="active">Why Book Direct</a></li>
+                <li><a href="local-guide.html">Things to Do</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#booking" class="btn btn-nav">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Why Smart Travelers Book Direct</h1>
+            <p>Skip the middleman, save money, and get the best experience when you book directly with us</p>
+        </div>
+    </section>
+
+    <!-- Savings Calculator -->
+    <section class="savings-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Real Savings</span>
+                <h2>See How Much You Save</h2>
+            </div>
+            
+            <div class="example-dates">
+                <div class="label">Example Stay</div>
+                <div class="dates">Feb 15-17, 2026 (2 nights)</div>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Airbnb Price -->
+                <div class="price-box airbnb">
+                    <h3>🏠 Airbnb Price</h3>
+                    <div class="price-line">
+                        <span class="label">$400/night × 2 nights</span>
+                        <span class="value">$800</span>
+                    </div>
+                    <div class="price-line">
+                        <span class="label">Service fee</span>
+                        <span class="value">$140</span>
+                    </div>
+                    <div class="price-line">
+                        <span class="label">Taxes</span>
+                        <span class="value">$120</span>
+                    </div>
+                    <div class="price-line total">
+                        <span class="label">TOTAL</span>
+                        <span class="value">$1,060</span>
+                    </div>
+                </div>
+
+                <!-- Direct Price -->
+                <div class="price-box direct">
+                    <h3>✨ Classy Bear Direct</h3>
+                    <div class="price-line discount">
+                        <span class="label">$340/night × 2 nights <small>(15% off!)</small></span>
+                        <span class="value">$680</span>
+                    </div>
+                    <div class="price-line">
+                        <span class="label">Service fee</span>
+                        <span class="value">$0</span>
+                    </div>
+                    <div class="price-line">
+                        <span class="label">Taxes</span>
+                        <span class="value">$102</span>
+                    </div>
+                    <div class="price-line total">
+                        <span class="label">TOTAL</span>
+                        <span class="value">$782</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="savings-banner">
+                <div class="amount">YOU SAVE: $278</div>
+                <p>That's a nice dinner out in Gatlinburg! 🍽️</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">More Than Savings</span>
+                <h2>Additional Direct Booking Benefits</h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🕐</div>
+                    <div class="benefit-text">
+                        <h4>Flexible Check-in Times</h4>
+                        <p>Coordinate directly with us for early check-in or late checkout when available</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎂</div>
+                    <div class="benefit-text">
+                        <h4>Special Requests Accommodated</h4>
+                        <p>Celebrating something special? Have dietary needs? We'll help make it perfect</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">⚡</div>
+                    <div class="benefit-text">
+                        <h4>Faster Response to Questions</h4>
+                        <p>100% response rate — we typically reply within 1 hour</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💰</div>
+                    <div class="benefit-text">
+                        <h4>No Middleman Fees</h4>
+                        <p>Your money goes to your stay, not to platform shareholders</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎁</div>
+                    <div class="benefit-text">
+                        <h4>Repeat Guest Discounts</h4>
+                        <p>Book direct once, get 15% off all future stays as a thank you</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">📅</div>
+                    <div class="benefit-text">
+                        <h4>Early Access to Holidays</h4>
+                        <p>Direct guests get first dibs on peak season and holiday availability</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Book -->
+    <section class="how-to-book" id="booking">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Simple Process</span>
+                <h2>How to Book Direct</h2>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Check Availability</h4>
+                    <p>Use the calendar below to find your perfect dates</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Click "Book Now"</h4>
+                    <p>Select your dates and review the pricing</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Complete Booking</h4>
+                    <p>Fill out the secure iGMS booking form</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Get Confirmation</h4>
+                    <p>Receive instant confirmation and welcome info</p>
+                </div>
+            </div>
+
+            <div class="booking-widget-container">
+                <div
+                    class="igms-direct-booking-widget"
+                    id="directBooking1769975210638"
+                    data-listing-id="ec511f0a-3795-4044-b229-cc0f6f9afa87"
+                    data-widget-color="#FFC107"
+                    data-text-check-availability="Check Availability"
+                    data-text-book-now="Book Now"
+                ></div>
+                <div style="margin-top: 1.5rem; text-align: center; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-light); font-size: 0.9rem;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Secure Checkout
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--color-text-light); font-size: 0.9rem;">
+                        <span>Powered by Stripe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script
+        src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336"
+        type="application/javascript"
+    ></script>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Don't Just Take Our Word</span>
+                <h2>What Our Guests Say</h2>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Absolutely stunning views! The cabin was spotless, and everything we needed was provided. The renovated kitchen was a nice surprise. Will definitely be back!"</p>
+                    <div class="review-author">— Sarah M.</div>
+                    <div class="review-source">Verified Guest</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"This was our 3rd time staying at Classy Bear. The owners are incredibly responsive and accommodating. Booking direct saved us a ton compared to last time on Airbnb!"</p>
+                    <div class="review-author">— The Johnson Family</div>
+                    <div class="review-source">Repeat Guest</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"The hot tub with those mountain views... unreal. Perfect getaway for our anniversary. The host even helped us arrange a surprise for my wife."</p>
+                    <div class="review-author">— Michael R.</div>
+                    <div class="review-source">Verified Guest</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Great location - close to everything but felt secluded. Kids loved the game room. The newly renovated bathrooms were beautiful. Highly recommend!"</p>
+                    <div class="review-author">— Jennifer T.</div>
+                    <div class="review-source">Verified Guest</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"Communication was excellent from booking to checkout. They answered every question quickly and the welcome guide had everything we needed to know."</p>
+                    <div class="review-author">— David & Lisa</div>
+                    <div class="review-source">Verified Guest</div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">"We've rented many cabins in Gatlinburg and this is by far the best. Clean, well-maintained, and those views are as good as the pictures show!"</p>
+                    <div class="review-author">— Amanda K.</div>
+                    <div class="review-source">Verified Guest</div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="reviews.html" class="btn btn-primary">Read All Reviews</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions Section -->
+    <section class="questions-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">We're Here to Help</span>
+                <h2>Still Have Questions?</h2>
+            </div>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-method-icon">📱</div>
+                    <h4>Text or Call</h4>
+                    <a href="tel:+1XXXXXXXXXX">Contact Us</a>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.5rem;">Available 8am-10pm EST</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">📧</div>
+                    <h4>Email</h4>
+                    <a href="mailto:info@classybearcabin.com">info@classybearcabin.com</a>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.5rem;">We reply fast!</p>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-method-icon">💬</div>
+                    <h4>Instagram DM</h4>
+                    <a href="https://www.instagram.com/classybearcabin" target="_blank">@classybearcabin</a>
+                    <p style="font-size: 0.85rem; color: var(--color-text-light); margin-top: 0.5rem;">Send us a message</p>
+                </div>
+            </div>
+            
+            <div class="response-time">
+                <div class="badge">
+                    <span>⚡</span>
+                    <span>Average response time: Under 1 hour</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta">
+        <div class="cta-bg" style="background-image: url('images/gallery/deck-view-1.jpg');"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Ready to Save on Your Getaway?</h2>
+            <p>Book direct today and keep more money for making memories</p>
+            <a href="#booking" class="btn btn-primary btn-large">Check Availability</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#amenities">Amenities</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="book-direct.html">Why Book Direct</a>
+                    <a href="local-guide.html">Things to Do</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo-img">
+                <p>&copy; 2025 Classy Bear Cabin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
