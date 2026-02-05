@@ -338,7 +338,7 @@
         .hero-subtitle {
             font-size: 1.2rem;
             opacity: 0.95;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             font-weight: 400;
         }
         .hero-rating {
@@ -357,40 +357,6 @@
             font-size: 1rem;
             opacity: 0.9;
         }
-        .hero-price {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            padding: 1.25rem 2rem;
-            border-radius: 12px;
-            display: inline-flex;
-            align-items: baseline;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .hero-price .price-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-        .hero-price .price-amount {
-            font-size: 2.5rem;
-            font-weight: 700;
-            font-family: var(--font-heading);
-        }
-        .hero-price .price-unit {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        .hero-price .price-save {
-            background: #E8B44C;
-            color: #1A1A1A;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-left: 0.5rem;
-        }
         .btn-hero-cta {
             display: inline-block;
             background: #E8B44C;
@@ -402,6 +368,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 4px 20px rgba(232, 180, 76, 0.4);
+            margin-bottom: 1rem;
         }
         .btn-hero-cta:hover {
             background: #F5C65A;
@@ -409,21 +376,24 @@
             box-shadow: 0 6px 30px rgba(232, 180, 76, 0.5);
             color: #1A1A1A;
         }
-        .hero-trust {
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            opacity: 0.85;
+        .hero-price-line {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin: 0;
+        }
+        .hero-price-line strong {
+            font-size: 1.2rem;
+        }
+        .hero-price-line .save-tag {
+            background: rgba(232, 180, 76, 0.9);
+            color: #1A1A1A;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.25rem;
         }
         @media (max-width: 600px) {
-            .hero-price {
-                padding: 1rem 1.5rem;
-                flex-direction: column;
-                gap: 0.25rem;
-            }
-            .hero-price .price-save {
-                margin-left: 0;
-                margin-top: 0.5rem;
-            }
             .btn-hero-cta {
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
@@ -688,7 +658,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg" style="background-image: url('images/hero-deck-view.jpg');"></div>
+        <div class="hero-bg" style="background-image: url('images/hero-mountain-deck.jpg'); background-position: center 30%;"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Classy Bear Cabin</h1>
@@ -699,18 +669,11 @@
                 <span class="rating-text">4.76 rating · 148+ reviews</span>
             </div>
             
-            <div class="hero-price">
-                <span class="price-label">From</span>
-                <span class="price-amount">$340</span>
-                <span class="price-unit">/night direct</span>
-                <span class="price-save">Save 15% vs Airbnb</span>
-            </div>
-            
             <a href="#" class="btn-hero-cta" onclick="openBookingModal(); return false;">
                 Check Availability
             </a>
             
-            <p class="hero-trust">✓ Free cancellation · ✓ Instant confirmation · ✓ Best price guaranteed</p>
+            <p class="hero-price-line">From <strong>$340/night</strong> direct · <span class="save-tag">Save 15%</span></p>
         </div>
     </section>
 
