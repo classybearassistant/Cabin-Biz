@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Classy Bear Cabin is located in Chalet Village, Gatlinburg - a prime summit location with stunning mountain views. 2 miles to downtown, 5 min to Ober Mountain.">
+    <meta name="keywords" content="Chalet Village Gatlinburg, summit cabin Gatlinburg, mountain view cabin, Gatlinburg cabin location, near Ober Mountain, near downtown Gatlinburg">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://classybearcabin.com/location">
+    
+    <title>Chalet Village, Gatlinburg - Prime Summit Location | Classy Bear Cabin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ370T5T66"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HJ370T5T66');
+    </script>
+
+    <style>
+        .location-hero {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .location-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/gallery/mountain-fog.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .location-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(30, 61, 50, 0.7), rgba(30, 61, 50, 0.85));
+        }
+        .location-hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 6rem 2rem 4rem;
+        }
+        .location-hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .location-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .distance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .distance-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #2D5A4A;
+        }
+        .distance-card .time {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2D5A4A;
+            font-family: var(--font-heading);
+        }
+        .distance-card .unit {
+            font-size: 1rem;
+            color: #666;
+        }
+        .distance-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+        .distance-card p {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .benefits-section {
+            background: #F8F9FA;
+            padding: 4rem 0;
+        }
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .benefit-card {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .benefit-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+        .benefit-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .benefit-card p {
+            color: #666;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .map-section {
+            padding: 4rem 0;
+        }
+        .map-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+        }
+
+        .nearby-section {
+            background: white;
+            padding: 4rem 0;
+        }
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .nearby-card {
+            background: #F8F9FA;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .nearby-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nearby-card .distance {
+            background: #2D5A4A;
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .nearby-card p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#amenities">Amenities</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="book-direct.html">Why Book Direct</a></li>
+                <li><a href="local-guide.html">Things to Do</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog/">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="location-hero">
+        <div class="location-hero-bg"></div>
+        <div class="location-hero-overlay"></div>
+        <div class="location-hero-content">
+            <h1>Chalet Village, Gatlinburg</h1>
+            <p>Prime summit location with breathtaking mountain views and easy access to everything</p>
+        </div>
+    </section>
+
+    <!-- Distance Cards -->
+    <section style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Minutes Away</span>
+                <h2>Close to Everything</h2>
+            </div>
+            <div class="distance-grid">
+                <div class="distance-card">
+                    <div class="time">2 <span class="unit">miles</span></div>
+                    <h3>Downtown Gatlinburg</h3>
+                    <p>Shops, restaurants, attractions & nightlife</p>
+                </div>
+                <div class="distance-card">
+                    <div class="time">5 <span class="unit">min</span></div>
+                    <h3>Ober Mountain</h3>
+                    <p>Skiing, tubing, alpine coaster & aerial tramway</p>
+                </div>
+                <div class="distance-card">
+                    <div class="time">6 <span class="unit">min</span></div>
+                    <h3>Ripley's Aquarium</h3>
+                    <p>One of the top aquariums in the country</p>
+                </div>
+                <div class="distance-card">
+                    <div class="time">10 <span class="unit">min</span></div>
+                    <h3>Great Smoky Mountains</h3>
+                    <p>National Park entrance & hiking trails</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Why Chalet Village</span>
+                <h2>The Perfect Location</h2>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏔️</div>
+                    <div>
+                        <h3>Summit Elevation</h3>
+                        <p>Located at the top of Chalet Village with panoramic mountain views that can't be blocked by future development.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌅</div>
+                    <div>
+                        <h3>Sunrise & Sunset Views</h3>
+                        <p>Watch the sun paint the Smokies in golden light from your private deck. Moonrises are magical too.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🦌</div>
+                    <div>
+                        <h3>Wildlife & Nature</h3>
+                        <p>Deer, wild turkeys, and occasional black bears visit the neighborhood. True mountain living.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏊</div>
+                    <div>
+                        <h3>Owners Club Access</h3>
+                        <p>Seasonal access to Chalet Village Owners Club with pool, fitness center, and tennis courts.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚗</div>
+                    <div>
+                        <h3>Easy Access</h3>
+                        <p>Paved roads all the way. Just 5 minutes from downtown but feels worlds away.</p>
+                    </div>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤫</div>
+                    <div>
+                        <h3>Peaceful & Private</h3>
+                        <p>Quiet residential community. No through traffic. Just mountain breezes and birdsong.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Find Us</span>
+                <h2>Our Location</h2>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12937.008584294363!2d-83.52!3d35.72!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885c0fc5f3d01817%3A0x2cc0a7bcfc5a3797!2sChalet%20Village%2C%20Gatlinburg%2C%20TN!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Attractions -->
+    <section class="nearby-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Explore</span>
+                <h2>Nearby Attractions</h2>
+            </div>
+            <div class="nearby-grid">
+                <div class="nearby-card">
+                    <h3>🎿 Ober Mountain <span class="distance">5 min</span></h3>
+                    <p>Ski slopes, snow tubing, ice skating, alpine coaster, and aerial tramway with stunning views.</p>
+                </div>
+                <div class="nearby-card">
+                    <h3>🛍️ Downtown Gatlinburg <span class="distance">2 mi</span></h3>
+                    <p>Shops, restaurants, arcades, mini golf, and the famous Gatlinburg Strip.</p>
+                </div>
+                <div class="nearby-card">
+                    <h3>🐠 Ripley's Aquarium <span class="distance">6 min</span></h3>
+                    <p>Walk-through shark tunnel, touch tanks, and thousands of aquatic animals.</p>
+                </div>
+                <div class="nearby-card">
+                    <h3>🥾 Hiking Trails <span class="distance">10 min</span></h3>
+                    <p>Rainbow Falls, Alum Cave, Chimney Tops, and hundreds more in the National Park.</p>
+                </div>
+                <div class="nearby-card">
+                    <h3>🎢 Dollywood <span class="distance">25 min</span></h3>
+                    <p>World-class theme park with rides, shows, crafts, and amazing food.</p>
+                </div>
+                <div class="nearby-card">
+                    <h3>🚗 Cades Cove <span class="distance">45 min</span></h3>
+                    <p>Scenic 11-mile loop through historic valley. Best wildlife viewing in the Smokies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg" style="background-image: url('images/gallery/deck-view-1.jpg');"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Experience the Best Location in Gatlinburg</h2>
+            <p>Summit views, easy access, and memories that last a lifetime</p>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal()">Check Availability</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#amenities">Amenities</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="book-direct.html">Why Book Direct</a>
+                    <a href="local-guide.html">Things to Do</a>
+                    <a href="reviews.html">Reviews</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo-img">
+                <p>&copy; 2025 Classy Bear Cabin. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal">
+        <div class="booking-modal-content">
+            <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
+            <div
+                class="igms-direct-booking-widget"
+                id="directBookingLocation"
+                data-listing-id="ec511f0a-3795-4044-b229-cc0f6f9afa87"
+                data-widget-color="#FFC107"
+                data-text-check-availability="Check Availability"
+                data-text-book-now="Book Now"
+            ></div>
+        </div>
+    </div>
+    <script src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336" type="application/javascript"></script>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Booking Modal
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('bookingModal').addEventListener('click', function(e) {
+            if (e.target === this) closeBookingModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeBookingModal();
+        });
+    </script>
+</body>
+</html>
