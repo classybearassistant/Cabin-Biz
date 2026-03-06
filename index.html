@@ -769,10 +769,19 @@
                 <span class="rating-text">148 verified guest reviews</span>
             </div>
             
-            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin: 2rem 0 1rem;">
-                <a href="#booking-widget" class="btn-hero-cta">
-                    Check Availability
-                </a>
+            <!-- Inline Booking Widget in Hero -->
+            <div style="background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 2rem; border-radius: 12px; max-width: 600px; margin: 2rem auto; box-shadow: 0 8px 32px rgba(0,0,0,0.2);">
+                <div
+                    class="igms-direct-booking-widget"
+                    id="directBookingHero"
+                    data-listing-id="ec511f0a-3795-4044-b229-cc0f6f9afa87"
+                    data-widget-color="#FFC107"
+                    data-text-check-availability="Check Availability"
+                    data-text-book-now="Book Now"
+                ></div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap; margin: 1rem 0;">
                 <a href="local-guide.html" class="btn btn-secondary btn-large" style="background: rgba(255,255,255,0.95); color: #3A5F7D; border: 2px solid white; font-weight: 600;">
                     Things to Do →
                 </a>
@@ -807,27 +816,7 @@
     </section>
 
     <!-- Inline Booking Widget -->
-    <section class="booking-widget-section" id="booking-widget">
-        <div class="container">
-            <div class="booking-widget-wrapper">
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--color-dark); margin-bottom: 0.5rem;">Check Availability & Book Direct</h2>
-                    <p style="font-size: 1.2rem; color: var(--color-text); margin-bottom: 0;">Save 15% • No OTA Fees • Direct Owner Communication</p>
-                </div>
-                <div
-                    class="igms-direct-booking-widget"
-                    id="directBookingInline"
-                    data-listing-id="ec511f0a-3795-4044-b229-cc0f6f9afa87"
-                    data-widget-color="#FFC107"
-                    data-text-check-availability="Check Availability"
-                    data-text-book-now="Book Now"
-                ></div>
-                <p style="text-align: center; margin-top: 1.5rem; color: var(--color-text-light); font-size: 0.95rem;">
-                    <strong>Questions?</strong> Call us or <a href="local-guide.html" style="color: var(--color-primary); font-weight: 600;">explore things to do nearby →</a>
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- Booking widget now in hero section above -->
 
     <!-- Direct Booking Comparison -->
     <section class="booking-comparison">
