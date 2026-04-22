@@ -293,15 +293,16 @@ p {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
     list-style: none;
 }
 
 .nav-menu a {
-    font-size: 0.72rem;
+    font-size: 0.65rem;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
+    white-space: nowrap;
     color: rgba(255,255,255,0.85);
     padding: 0.5rem 0;
     position: relative;
