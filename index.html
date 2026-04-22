@@ -45,7 +45,6 @@
     "@type": "VacationRental",
     "name": "Classy Bear Cabin",
     "identifier": "classy-bear-cabin-gatlinburg",
-    "additionalType": "https://schema.org/LodgingBusiness",
     "description": "Luxury 3-bedroom log cabin rental in Gatlinburg, Tennessee near Great Smoky Mountains National Park. Features 3 king suites, private hot tub, summit mountain views, and sleeps 9 guests. Newly renovated kitchen and bathrooms in 2026. Pet-friendly.",
     "url": "https://classybearcabin.com",
     "image": [
@@ -60,11 +59,17 @@
     ],
     "containsPlace": {
         "@type": "Accommodation",
+        "additionalType": "Cabin",
         "name": "Classy Bear Cabin - Main Unit",
         "numberOfBedrooms": 3,
         "numberOfBathroomsTotal": 3,
+        "bed": [
+            {"@type": "BedDetails", "typeOfBed": "King", "numberOfBeds": 3},
+            {"@type": "BedDetails", "typeOfBed": "Bunk", "numberOfBeds": 1}
+        ],
         "occupancy": {
             "@type": "QuantitativeValue",
+            "value": 9,
             "maxValue": 9
         },
         "amenityFeature": [
@@ -90,6 +95,7 @@
     },
     "review": {
         "@type": "Review",
+        "datePublished": "2026-03-15",
         "author": {
             "@type": "Person",
             "name": "Verified Guest"
