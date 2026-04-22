@@ -41,29 +41,32 @@
     
     <!-- Structured Data for SEO & AEO -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VacationRental",
-        "name": "Classy Bear Cabin",
-        "description": "Luxury 3-bedroom log cabin rental in Gatlinburg, Tennessee near Great Smoky Mountains National Park. Features 3 king suites, private hot tub, summit mountain views, and sleeps 9 guests. Newly renovated kitchen and bathrooms in 2026. Pet-friendly.",
-        "url": "https://classybearcabin.com",
-        "image": [
-            "https://classybearcabin.com/images/hero-mountain-deck.jpg",
-            "https://classybearcabin.com/images/gallery/kitchen-renovated.jpg",
-            "https://classybearcabin.com/images/gallery/bathroom-whirlpool.jpg"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Chalet Village",
-            "addressLocality": "Gatlinburg",
-            "addressRegion": "TN",
-            "postalCode": "37738",
-            "addressCountry": "US"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "35.7143",
-            "longitude": "-83.5102"
+{
+    "@context": "https://schema.org",
+    "@type": "VacationRental",
+    "name": "Classy Bear Cabin",
+    "identifier": "classy-bear-cabin-gatlinburg",
+    "additionalType": "https://schema.org/LodgingBusiness",
+    "description": "Luxury 3-bedroom log cabin rental in Gatlinburg, Tennessee near Great Smoky Mountains National Park. Features 3 king suites, private hot tub, summit mountain views, and sleeps 9 guests. Newly renovated kitchen and bathrooms in 2026. Pet-friendly.",
+    "url": "https://classybearcabin.com",
+    "image": [
+        "https://classybearcabin.com/images/hero-mountain-deck.jpg",
+        "https://classybearcabin.com/images/gallery/kitchen-renovated.jpg",
+        "https://classybearcabin.com/images/gallery/bathroom-whirlpool.jpg",
+        "https://classybearcabin.com/images/gallery/hot-tub-view.jpg",
+        "https://classybearcabin.com/images/gallery/mountain-view.jpg",
+        "https://classybearcabin.com/images/gallery/bedroom-bear.jpg",
+        "https://classybearcabin.com/images/gallery/bedroom-cow.jpg",
+        "https://classybearcabin.com/images/gallery/loft-kids.jpg"
+    ],
+    "containsPlace": {
+        "@type": "Accommodation",
+        "name": "Classy Bear Cabin - Main Unit",
+        "numberOfBedrooms": 3,
+        "numberOfBathroomsTotal": 3,
+        "occupancy": {
+            "@type": "QuantitativeValue",
+            "maxValue": 9
         },
         "amenityFeature": [
             {"@type": "LocationFeatureSpecification", "name": "Private Hot Tub", "value": true},
@@ -73,81 +76,64 @@
             {"@type": "LocationFeatureSpecification", "name": "Electric Fireplaces", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "4 Smart TVs", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true},
-            {"@type": "LocationFeatureSpecification", "name": "Seasonal Pool Access", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "Game Room", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "Washer/Dryer", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "3 King Beds", "value": true},
             {"@type": "LocationFeatureSpecification", "name": "Whirlpool Tub", "value": true}
-        ],
-        "numberOfBedrooms": 3,
-        "numberOfBathroomsTotal": 3,
-        "occupancy": {
-            "@type": "QuantitativeValue",
-            "maxValue": 9
-        },
-        "petsAllowed": true,
-        "checkinTime": "16:00",
-        "checkoutTime": "10:00",
-        "priceRange": "$340-$450"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How do I save money by booking direct at Classy Bear Cabin?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "When you book directly at classybearcabin.com, you save 15% off the nightly rate plus avoid OTA service fees (which can be $100-150+). On a typical 2-night stay, you'll save around $280. Plus you get direct owner communication and more flexible policies."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How far is Classy Bear Cabin from downtown Gatlinburg?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Classy Bear Cabin is just 2 miles from downtown Gatlinburg (5 minutes by car), 5 minutes from Ober Mountain ski resort, and 6 minutes from Ripley's Aquarium. We're in Chalet Village at summit elevation with stunning views."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is Classy Bear Cabin pet-friendly?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes! Classy Bear Cabin welcomes well-behaved pets. Contact us for our pet policy details and any applicable pet fees."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What's included in the kitchen at Classy Bear Cabin?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Our newly renovated kitchen (2026) is fully equipped with stainless steel appliances, cookware, dishes, utensils, coffee maker, toaster, and microwave. We also provide starter supplies: coffee, dish soap, paper towels, and trash bags."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What's the cancellation policy for Classy Bear Cabin?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Direct bookings have flexible cancellation. Full refund if cancelled 14+ days before check-in. 50% refund if cancelled 7-14 days before. Contact us for special circumstances."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Is 4WD required to reach Classy Bear Cabin in winter?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "The cabin is located at summit elevation in Chalet Village. In winter weather (snow/ice), 4WD or AWD with good tires is strongly recommended. The roads are maintained but can be steep and winding."
-                }
-            }
         ]
-    }
-    </script>
-
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "148",
+        "bestRating": "5",
+        "worstRating": "1"
+    },
+    "review": {
+        "@type": "Review",
+        "author": {
+            "@type": "Person",
+            "name": "Verified Guest"
+        },
+        "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+        },
+        "reviewBody": "Absolutely stunning cabin with breathtaking mountain views. The hot tub was perfect and the newly renovated kitchen had everything we needed. Will definitely be back!"
+    },
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Chalet Village",
+        "addressLocality": "Gatlinburg",
+        "addressRegion": "TN",
+        "postalCode": "37738",
+        "addressCountry": "US"
+    },
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "35.7143",
+        "longitude": "-83.5102"
+    },
+    "amenityFeature": [
+        {"@type": "LocationFeatureSpecification", "name": "Private Hot Tub", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Summit Mountain Views", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "High-Speed WiFi", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Fully Equipped Kitchen", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Electric Fireplaces", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "4 Smart TVs", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Game Room", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Washer/Dryer", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "3 King Beds", "value": true},
+        {"@type": "LocationFeatureSpecification", "name": "Whirlpool Tub", "value": true}
+    ],
+    "petsAllowed": true,
+    "checkinTime": "16:00",
+    "checkoutTime": "10:00",
+    "priceRange": "$340-$450"
+}
+</script>
     <style>
         /* Book Direct Banner */
         .top-banner {
