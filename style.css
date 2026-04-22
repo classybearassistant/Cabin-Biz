@@ -553,7 +553,7 @@ p {
    ========================================= */
 .amenities {
     padding: var(--space-xl) 0;
-    background: var(--color-dark);
+    background: var(--color-white);
 }
 
 .amenities .section-header h2 {
@@ -576,7 +576,7 @@ p {
 }
 
 .amenity-card {
-    background: var(--color-dark);
+    background: var(--color-white);
     padding: 2.5rem 2rem;
     text-align: left;
     transition: background var(--transition);
