@@ -1406,12 +1406,22 @@ a.attraction:hover .attraction-distance {
 }
 /* Amenity card text fix */
 .amenity-card h3,
-.amenity-card h4 {
-    color: var(--color-dark) !important;
+.amenity-card h4,
+.amenity-card h3 *,
+.amenity-card h4 * {
+    color: #2E2E2B !important;
 }
-.amenity-card p {
-    color: var(--color-text-light) !important;
+.amenity-card p,
+.amenity-card p * {
+    color: #6B6B62 !important;
 }
-.amenities .section-header h2 {
-    color: var(--color-dark) !important;
+.amenity-card {
+    color: #2E2E2B !important;
+}
+.amenities .section-header h2,
+.amenities .section-header h2 * {
+    color: #2E2E2B !important;
+}
+.amenities .section-header p {
+    color: #6B6B62 !important;
 }
