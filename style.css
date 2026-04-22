@@ -357,8 +357,8 @@ p {
    ========================================= */
 .hero {
     position: relative;
-    height: 100vh;
-    min-height: 600px;
+    height: 75vh;
+    min-height: 550px;
     display: flex;
     align-items: center;
     justify-content: center;
