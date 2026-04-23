@@ -1243,18 +1243,6 @@
         </div>
     </div>
 
-    <!-- Social Proof Notifications -->
-    <div class="social-proof" id="socialProof">
-        <div class="social-proof-content">
-            <div class="social-proof-icon">🏠</div>
-            <div class="social-proof-text">
-                <strong id="proofName">Sarah from Chicago</strong>
-                <span id="proofAction">just booked Feb 22-24</span>
-            </div>
-        </div>
-        <button class="social-proof-close" onclick="closeSocialProof()">×</button>
-    </div>
-
     <!-- Contact Bar -->
     <div class="contact-bar">
         <a href="tel:+18653259373" class="contact-bar-btn" title="Call Us">
@@ -1431,53 +1419,6 @@
                 showExitPopup();
             }
         }, 45000);
-
-        // Social Proof Notifications
-        const socialProof = document.getElementById('socialProof');
-        const proofName = document.getElementById('proofName');
-        const proofAction = document.getElementById('proofAction');
-        
-        const proofData = [
-            { name: 'Sarah from Chicago', action: 'just booked Feb 22-24' },
-            { name: 'Michael from Atlanta', action: 'is viewing this cabin' },
-            { name: 'The Williams family', action: 'just booked for Spring Break' },
-            { name: 'Jennifer from Nashville', action: 'saved this to favorites' },
-            { name: 'David from Charlotte', action: 'just booked Mar 15-18' },
-            { name: 'Emily from Ohio', action: 'is checking availability' },
-            { name: 'The Martinez family', action: 'just booked a weekend getaway' },
-            { name: 'Chris from Florida', action: 'is viewing photos' }
-        ];
-        
-        let proofIndex = 0;
-        let proofPaused = false;
-        
-        function showSocialProof() {
-            if (proofPaused) return;
-            
-            const proof = proofData[proofIndex];
-            proofName.textContent = proof.name;
-            proofAction.textContent = proof.action;
-            socialProof.classList.add('visible');
-            
-            setTimeout(() => {
-                socialProof.classList.remove('visible');
-            }, 5000);
-            
-            proofIndex = (proofIndex + 1) % proofData.length;
-        }
-        
-        function closeSocialProof() {
-            socialProof.classList.remove('visible');
-            proofPaused = true;
-        }
-        
-        // Start social proof after 8 seconds, then every 30-45 seconds
-        setTimeout(() => {
-            showSocialProof();
-            setInterval(() => {
-                showSocialProof();
-            }, 30000 + Math.random() * 15000);
-        }, 8000);
 
         // Hero Slideshow
         const slides = document.querySelectorAll('.hero-slide');
