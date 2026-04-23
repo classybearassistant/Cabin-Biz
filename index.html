@@ -1342,15 +1342,6 @@
             }
         });
 
-        // Sticky CTA Bar - show after scrolling past hero
-        const stickyCta = document.getElementById('stickyCta');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 600) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
-            }
-        });
 
         // Exit Intent Popup
         let exitPopupShown = sessionStorage.getItem('exitPopupShown');
