@@ -698,7 +698,7 @@ a.attraction:hover {
 }
 
 a.attraction:hover .attraction-distance {
-    background: var(--color-accent);
+    background: #4a4e45;
 }
 
 .attraction-distance {
