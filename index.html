@@ -183,10 +183,13 @@
             .top-banner {
                 flex-direction: column;
                 gap: 0.5rem;
-                padding: 0.5rem;
+                padding: 0.4rem 0.75rem;
+                justify-content: space between;
             }
             .top-banner .banner-text {
-                font-size: 0.8rem;
+                font-size: 0.72rem;
+                flex: 1;
+                text-align: left;
             }
         }
         body.has-banner .navbar {
@@ -322,7 +325,7 @@
         /* Updated Amenities Grid */
         .amenities-highlight {
             background: var(--color-cream);
-            padding: 4rem 0;
+            padding: 2.5rem 0;
         }
         .amenities-highlight-grid {
             display: grid;
@@ -855,7 +858,7 @@
             <div class="section-header">
                 <span class="section-subtitle">What We Offer</span>
                 <h2>Premium Amenities</h2>
-                <p>Experience the perfect blend of rustic charm and modern comfort</p>
+                <p style="margin-bottom: 1rem;">Experience the perfect blend of rustic charm and modern comfort</p>
             </div>
             <div class="amenities-highlight-grid">
                 <div class="amenity-highlight-item">
