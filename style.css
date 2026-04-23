@@ -734,7 +734,8 @@ a.attraction:hover .attraction-distance {
     border-radius: var(--radius-md);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    height: 500px;
+    height: 100%;
+   min-height: 480px
 }
 
 .location-map iframe {
