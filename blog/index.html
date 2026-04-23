@@ -7,10 +7,8 @@
     <meta name="description" content="Travel tips, local guides, and insider info for your Smoky Mountain getaway at Classy Bear Cabin in Gatlinburg, TN.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HJ370T5T66"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,18 +16,76 @@
         gtag('js', new Date());
         gtag('config', 'G-HJ370T5T66');
     </script>
+    <style>
+        .top-banner {
+            background: #4a4e45;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .top-banner .banner-text { color: rgba(255,255,255,0.85); }
+        .top-banner .banner-btn {
+            background: #B8965A; color: #FFFFFF; border: none;
+            padding: 0.4rem 1rem; border-radius: 6px; font-weight: 700;
+            font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .top-banner .banner-btn:hover { background: #9A7A45; }
+        @media (max-width: 500px) {
+            .top-banner { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; padding: 0.4rem 0.75rem; justify-content: space-between; }
+            .top-banner .banner-text { font-size: 0.72rem; flex: 1; text-align: left; }
+            .top-banner .banner-btn { font-size: 0.75rem; padding: 0.35rem 0.7rem; white-space: nowrap; flex-shrink: 0; }
+        }
+        .blog-article {
+            background: white;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(28,28,26,0.10);
+            transition: transform 0.3s ease;
+            border: 1px solid #E0DAD0;
+        }
+        .blog-article:hover { transform: translateY(-4px); }
+        .blog-article img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .blog-article-body { padding: 1.5rem; }
+        .blog-meta { font-size: 0.85rem; color: #6B6B62; margin-bottom: 0.5rem; }
+        .blog-article h3 { font-family: 'Playfair Display', serif; font-size: 1.4rem; margin-bottom: 0.75rem; font-weight: 400; }
+        .blog-article h3 a { color: #1C1C1A; text-decoration: none; }
+        .blog-article h3 a:hover { color: #4A6741; }
+        .blog-article p { color: #2E2E2B; line-height: 1.6; margin-bottom: 1rem; font-size: 0.95rem; }
+        .blog-read-more { color: #4A6741; font-weight: 500; text-decoration: none; font-size: 0.9rem; }
+        .blog-read-more:hover { color: #354B2F; }
+        .contact-bar { position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 0.75rem; z-index: 997; }
+        .contact-bar-btn { width: 50px; height: 50px; background: #4A4E45; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s, background 0.2s; }
+        .contact-bar-btn:hover { background: #2C4A61; transform: scale(1.1); color: white; }
+        @media (max-width: 600px) { .contact-bar { right: 10px; bottom: 70px; flex-direction: row; gap: 0.5rem; } .contact-bar-btn { width: 44px; height: 44px; } }
+    </style>
 </head>
 <body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <span class="banner-text">🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
+        <a href="../index.html#booking" class="banner-btn">Check Availability</a>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar scrolled" id="navbar" style="top: 34px;">
         <div class="nav-container">
-            <a href="../index.html" class="nav-logo">
-                <img src="../images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            <a href="../index.html" class="nav-logo" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:white;letter-spacing:1px;font-style:italic;">
+                Classy Bear Cabin
             </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="../index.html">Home</a></li>
@@ -40,251 +96,246 @@
                 <li><a href="../reviews.html">Reviews</a></li>
                 <li><a href="index.html" class="active">Blog</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
-                <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="min-height: 50vh;">
-        <div class="hero-bg" style="background-image: url('../images/blog-hero.jpg');"></div>
+    <section class="hero" style="min-height: 45vh; margin-top: 34px;">
+        <div class="hero-bg" style="background-image: url('../images/gallery/mountain-fog.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 style="font-size: 3.5rem; color: #E8D4B8; letter-spacing: 3px; text-transform: uppercase;">Classy Chronicles</h1>
+            <span style="font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:#D4AF7A;display:block;margin-bottom:1rem;">Smoky Mountain Stories</span>
+            <h1 style="font-style:italic;">Classy Chronicles</h1>
             <p>Travel tips, local guides, and insider info for your perfect Smoky Mountain getaway</p>
         </div>
     </section>
 
     <!-- Blog Grid -->
-    <section class="section" style="background: var(--color-white);">
+    <section style="background: #F5F1EB; padding: 4rem 0;">
         <div class="container">
             <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; padding: 2rem 0;">
-                
-                <!-- NEW: April in Gatlinburg Guide -->
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+
+                <!-- NEW: May Events in Gatlinburg -->
+                <article class="blog-article">
+                    <a href="may-events-gatlinburg-2026.html">
+                        <img src="../images/gallery/aerial-gatlinburg.jpg" alt="May Events in Gatlinburg 2026">
+                    </a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">April 23, 2026 • Events Guide 🌿</p>
+                        <h3><a href="may-events-gatlinburg-2026.html">What's Happening in Gatlinburg in May 2026</a></h3>
+                        <p>From Dollywood's flower festival to live music, craft fairs, and perfect hiking weather — May is one of the best months to visit the Smokies. Here's everything you need to know.</p>
+                        <a href="may-events-gatlinburg-2026.html" class="blog-read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- April Guide -->
+                <article class="blog-article">
                     <a href="april-gatlinburg-guide.html">
-                        <img src="../images/spring-break-gatlinburg.jpg" alt="April in Gatlinburg Complete Guide" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/spring-break-gatlinburg.jpg" alt="April in Gatlinburg Complete Guide">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">March 5, 2026 • Spring Travel Guide 🌸</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="april-gatlinburg-guide.html" style="color: var(--color-dark); text-decoration: none;">April in Gatlinburg: Your Complete Guide</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Discover wildflower season, Dollywood's Festival of Nations, live shows, perfect hiking weather, and everything April has to offer in the Smoky Mountains.</p>
-                        <a href="april-gatlinburg-guide.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">March 5, 2026 • Spring Travel Guide 🌸</p>
+                        <h3><a href="april-gatlinburg-guide.html">April in Gatlinburg: Your Complete Guide</a></h3>
+                        <p>Discover wildflower season, Dollywood's Festival of Nations, live shows, perfect hiking weather, and everything April has to offer in the Smoky Mountains.</p>
+                        <a href="april-gatlinburg-guide.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <!-- FEATURED: What Makes Us Classy -->
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- What Makes Us Classy -->
+                <article class="blog-article">
                     <a href="what-makes-us-classy.html">
-                        <img src="../images/gallery/classy-dog-portraits.jpg" alt="What Makes Classy Bear Cabin truly classy" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/classy-dog-portraits.jpg" alt="What Makes Classy Bear Cabin truly classy">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 18, 2026 • Our Story 🎩</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="what-makes-us-classy.html" style="color: var(--color-dark); text-decoration: none;">What Makes Us Classy</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Discover the refined touches that make Classy Bear Cabin truly special — from chromotherapy whirlpool tubs to custom artwork and herringbone backsplash. It's more than just a name.</p>
-                        <a href="what-makes-us-classy.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 18, 2026 • Our Story 🎩</p>
+                        <h3><a href="what-makes-us-classy.html">What Makes Us Classy</a></h3>
+                        <p>Discover the refined touches that make Classy Bear Cabin truly special — from chromotherapy whirlpool tubs to custom artwork and herringbone backsplash.</p>
+                        <a href="what-makes-us-classy.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <!-- NEW: Sunrise & Moonrise Guide -->
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Sunrise & Moonrise -->
+                <article class="blog-article">
                     <a href="sunrise-moonrise-gatlinburg.html">
-                        <img src="../images/gallery/moonrise-mountains.jpg" alt="Best Places to Watch Sunrise and Moonrise in Gatlinburg" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/moonrise-mountains.jpg" alt="Best Places to Watch Sunrise and Moonrise in Gatlinburg">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 5, 2026 • Sky Watching</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="sunrise-moonrise-gatlinburg.html" style="color: var(--color-dark); text-decoration: none;">The Best Places to Watch Sunrise and Moonrise in Gatlinburg</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Experience the magic of the Smoky Mountains at dawn and dusk. All photos captured from Classy Bear Cabin!</p>
-                        <a href="sunrise-moonrise-gatlinburg.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 5, 2026 • Sky Watching 🌙</p>
+                        <h3><a href="sunrise-moonrise-gatlinburg.html">The Best Places to Watch Sunrise and Moonrise in Gatlinburg</a></h3>
+                        <p>Experience the magic of the Smoky Mountains at dawn and dusk. All photos captured from Classy Bear Cabin!</p>
+                        <a href="sunrise-moonrise-gatlinburg.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Keep It Classy -->
+                <article class="blog-article">
                     <a href="classy-things-to-do-gatlinburg.html">
-                        <img src="../images/keep-it-classy-blog.jpg" alt="Upscale Things to Do in Gatlinburg" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/keep-it-classy-blog.jpg" alt="Upscale Things to Do in Gatlinburg">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 3, 2026 • Luxury Travel</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="classy-things-to-do-gatlinburg.html" style="color: var(--color-dark); text-decoration: none;">Keep It Classy: Upscale Things to Do in Gatlinburg</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Skip the tourist traps. Discover fine dining, wine tastings, spas, and refined experiences in the Smokies.</p>
-                        <a href="classy-things-to-do-gatlinburg.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 3, 2026 • Luxury Travel ✨</p>
+                        <h3><a href="classy-things-to-do-gatlinburg.html">Keep It Classy: Upscale Things to Do in Gatlinburg</a></h3>
+                        <p>Skip the tourist traps. Discover fine dining, wine tastings, spas, and refined experiences in the Smokies.</p>
+                        <a href="classy-things-to-do-gatlinburg.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Dollywood -->
+                <article class="blog-article">
                     <a href="dollywood-family-trip-guide.html">
-                        <img src="../images/dollywood-blog.jpg" alt="Dollywood Family Trip Planning Guide" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/dollywood-blog.jpg" alt="Dollywood Family Trip Planning Guide">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 3, 2026 • Family Travel</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="dollywood-family-trip-guide.html" style="color: var(--color-dark); text-decoration: none;">Planning a Family Trip to Dollywood: Complete 2026 Guide</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Everything you need to know - best times to visit, must-do rides, insider tips, and where to stay near the park.</p>
-                        <a href="dollywood-family-trip-guide.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 3, 2026 • Family Travel 🎢</p>
+                        <h3><a href="dollywood-family-trip-guide.html">Planning a Family Trip to Dollywood: Complete 2026 Guide</a></h3>
+                        <p>Everything you need to know — best times to visit, must-do rides, insider tips, and where to stay near the park.</p>
+                        <a href="dollywood-family-trip-guide.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Spring Break -->
+                <article class="blog-article">
                     <a href="spring-break-gatlinburg-cabin.html">
-                        <img src="../images/spring-break-gatlinburg.jpg" alt="Spring Break in Gatlinburg cabin" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/spring-break-gatlinburg.jpg" alt="Spring Break in Gatlinburg cabin">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 2, 2026 • Travel Guide</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="spring-break-gatlinburg-cabin.html" style="color: var(--color-dark); text-decoration: none;">Spring Break 2026: Why Gatlinburg Beats the Beach</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Skip the crowded beaches! A Smoky Mountain cabin is the perfect Spring Break destination for families.</p>
-                        <a href="spring-break-gatlinburg-cabin.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 2, 2026 • Travel Guide 🌿</p>
+                        <h3><a href="spring-break-gatlinburg-cabin.html">Spring Break 2026: Why Gatlinburg Beats the Beach</a></h3>
+                        <p>Skip the crowded beaches! A Smoky Mountain cabin is the perfect Spring Break destination for families.</p>
+                        <a href="spring-break-gatlinburg-cabin.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Cabin Rental Guide -->
+                <article class="blog-article">
                     <a href="gatlinburg-cabin-rental-guide.html">
-                        <img src="../images/hero-mountain-view.jpg" alt="Mountain view from Gatlinburg cabin" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/hero-mountain-view.jpg" alt="Mountain view from Gatlinburg cabin">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 1, 2026 • Travel Guide</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="gatlinburg-cabin-rental-guide.html" style="color: var(--color-dark); text-decoration: none;">The Ultimate Gatlinburg Cabin Rental Guide (2026)</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Everything you need to know about renting a cabin in Gatlinburg - from choosing locations to insider booking tips.</p>
-                        <a href="gatlinburg-cabin-rental-guide.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 1, 2026 • Travel Guide 🏔️</p>
+                        <h3><a href="gatlinburg-cabin-rental-guide.html">The Ultimate Gatlinburg Cabin Rental Guide (2026)</a></h3>
+                        <p>Everything you need to know about renting a cabin in Gatlinburg — from choosing locations to insider booking tips.</p>
+                        <a href="gatlinburg-cabin-rental-guide.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Valentine's Day -->
+                <article class="blog-article">
                     <a href="valentines-day-getaway-gatlinburg.html">
-                        <img src="../images/gallery/hot-tub.jpg" alt="Hot tub with mountain views" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/hot-tub.jpg" alt="Hot tub with mountain views">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">February 1, 2026 • Romance</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="valentines-day-getaway-gatlinburg.html" style="color: var(--color-dark); text-decoration: none;">Your Valentine's Day Escape in the Smokies</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Forget crowded restaurants and predictable gifts. This Valentine's Day, give the gift of a romantic mountain getaway.</p>
-                        <a href="valentines-day-getaway-gatlinburg.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">February 1, 2026 • Romance 💕</p>
+                        <h3><a href="valentines-day-getaway-gatlinburg.html">Your Valentine's Day Escape in the Smokies</a></h3>
+                        <p>Forget crowded restaurants and predictable gifts. This Valentine's Day, give the gift of a romantic mountain getaway.</p>
+                        <a href="valentines-day-getaway-gatlinburg.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Winter Wonderland -->
+                <article class="blog-article">
                     <a href="winter-wonderland-gatlinburg.html">
-                        <img src="../images/gallery/snow-view.jpg" alt="Snowy mountain view" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/snow-view.jpg" alt="Snowy mountain view">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">January 31, 2026 • Seasonal</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="winter-wonderland-gatlinburg.html" style="color: var(--color-dark); text-decoration: none;">Winter Wonderland: Why February is Magic in Gatlinburg</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Discover why winter in the Smokies offers a magical experience with fewer crowds and cozy cabin vibes.</p>
-                        <a href="winter-wonderland-gatlinburg.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">January 31, 2026 • Seasonal ❄️</p>
+                        <h3><a href="winter-wonderland-gatlinburg.html">Winter Wonderland: Why February is Magic in Gatlinburg</a></h3>
+                        <p>Discover why winter in the Smokies offers a magical experience with fewer crowds and cozy cabin vibes.</p>
+                        <a href="winter-wonderland-gatlinburg.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Things to Do -->
+                <article class="blog-article">
                     <a href="things-to-do-gatlinburg.html">
-                        <img src="../images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">January 28, 2026 • Local Guide</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="things-to-do-gatlinburg.html" style="color: var(--color-dark); text-decoration: none;">Top 10 Things to Do Near Classy Bear Cabin</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">From world-class dining to thrilling adventures, discover the best attractions just minutes away.</p>
-                        <a href="things-to-do-gatlinburg.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">January 28, 2026 • Local Guide 📍</p>
+                        <h3><a href="things-to-do-gatlinburg.html">Top 10 Things to Do Near Classy Bear Cabin</a></h3>
+                        <p>From world-class dining to thrilling adventures, discover the best attractions just minutes away.</p>
+                        <a href="things-to-do-gatlinburg.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Why Guests Love -->
+                <article class="blog-article">
                     <a href="why-guests-love-classy-bear.html">
-                        <img src="../images/gallery/loft-view.jpg" alt="Cabin loft with mountain view" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/loft-windows-view.jpg" alt="Cabin loft with mountain view">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">January 25, 2026 • Guest Experience</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="why-guests-love-classy-bear.html" style="color: var(--color-dark); text-decoration: none;">Why Guests Love Classy Bear Cabin</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">See why guests rave about their stay and keep coming back to our luxury mountain retreat.</p>
-                        <a href="why-guests-love-classy-bear.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">January 25, 2026 • Guest Experience ⭐</p>
+                        <h3><a href="why-guests-love-classy-bear.html">Why Guests Love Classy Bear Cabin</a></h3>
+                        <p>See why guests rave about their stay and keep coming back to our luxury mountain retreat.</p>
+                        <a href="why-guests-love-classy-bear.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
-                <article style="background: white; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-md); transition: transform 0.3s ease;">
+                <!-- Christmas -->
+                <article class="blog-article">
                     <a href="christmas-in-the-smokies.html">
-                        <img src="../images/gallery/christmas-tree.jpg" alt="Christmas tree in Classy Bear Cabin" style="width: 100%; height: 220px; object-fit: cover;">
+                        <img src="../images/gallery/snow-view.jpg" alt="Christmas in the Smokies">
                     </a>
-                    <div style="padding: 1.5rem;">
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0.5rem;">December 15, 2025 • Holiday</p>
-                        <h3 style="font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 0.75rem;">
-                            <a href="christmas-in-the-smokies.html" style="color: var(--color-dark); text-decoration: none;">Christmas in the Smokies: A Magical Holiday Escape</a>
-                        </h3>
-                        <p style="color: var(--color-text); line-height: 1.6; margin-bottom: 1rem;">Experience the magic of 3 million lights, festive attractions, and cozy cabin vibes for an unforgettable mountain Christmas.</p>
-                        <a href="christmas-in-the-smokies.html" style="color: var(--color-primary); font-weight: 500; text-decoration: none;">Read More →</a>
+                    <div class="blog-article-body">
+                        <p class="blog-meta">December 15, 2025 • Holiday 🎄</p>
+                        <h3><a href="christmas-in-the-smokies.html">Christmas in the Smokies: A Magical Holiday Escape</a></h3>
+                        <p>Experience the magic of 3 million lights, festive attractions, and cozy cabin vibes for an unforgettable mountain Christmas.</p>
+                        <a href="christmas-in-the-smokies.html" class="blog-read-more">Read More →</a>
                     </div>
                 </article>
 
             </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg" style="background-image: url('../images/gallery/deck-view-1.jpg');"></div>
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2>Ready for Your Smoky Mountain Getaway?</h2>
+            <p>Book direct and save 15% — no OTA fees, direct owner contact</p>
+            <a href="../index.html#booking" class="btn btn-primary btn-large">Check Availability</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="../images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo">
-                    <p>Your luxury mountain escape in the heart of Gatlinburg, Tennessee.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Explore</h4>
-                    <a href="../index.html">Home</a>
-                    <a href="../gallery.html">Gallery</a>
-                    <a href="../local-guide.html">Things to Do</a>
-                    <a href="../reviews.html">Reviews</a>
-                    <a href="index.html">Blog</a>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>Gatlinburg, Tennessee</p>
-                    <p>classybearassistant@gmail.com</p>
-                    <div class="footer-socials">
-<a href="https://www.instagram.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+            <div class="footer-bottom">
+                <img src="../images/logo-white-text.png" alt="Classy Bear Cabin" class="footer-logo-img">
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">
+                    <a href="https://www.facebook.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
                     </a>
-                    <a href="https://www.pinterest.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Pinterest">
+                    <a href="https://www.pinterest.com/classybearcabin" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146 1.124.347 2.317.535 3.554.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
                     </a>
                 </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Classy Bear Cabin. All rights reserved.</p>
+                <p>&copy; 2026 Classy Bear Cabin · Chalet Village, Gatlinburg TN</p>
             </div>
         </div>
     </footer>
 
+    <!-- Contact Bar -->
+    <div class="contact-bar">
+        <a href="tel:+18653259373" class="contact-bar-btn" title="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="mailto:info@classybearcabin.com" class="contact-bar-btn" title="Email Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </div>
+
     <script>
-        // Mobile nav toggle
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-        function openBookingModal() {
-            window.location.href = '../index.html#booking';
-        }
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
     </script>
 </body>
 </html>
