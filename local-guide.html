@@ -19,6 +19,40 @@
         gtag('config', 'G-HJ370T5T66');
     </script>
     <style>
+        .top-banner {
+    background: #4a4e45;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1002;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.top-banner .banner-text { color: rgba(255,255,255,0.85); }
+.top-banner .banner-btn {
+    background: #B8965A; color: #FFFFFF; border: none;
+    padding: 0.4rem 1rem; border-radius: 6px; font-weight: 700;
+    font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;
+}
+.top-banner .banner-btn:hover { background: #9A7A45; }
+@media (max-width: 500px) {
+    .top-banner { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; padding: 0.4rem 0.75rem; justify-content: space-between; }
+    .top-banner .banner-text { font-size: 0.72rem; flex: 1; text-align: left; }
+    .top-banner .banner-btn { font-size: 0.75rem; padding: 0.35rem 0.7rem; white-space: nowrap; flex-shrink: 0; }
+}
+.guide-hero { margin-top: 70px; }
+@media (max-width: 500px) { .guide-hero { margin-top: 106px; } }
+.contact-bar { position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 0.75rem; z-index: 997; }
+.contact-bar-btn { width: 50px; height: 50px; background: #4A4E45; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s; }
+.contact-bar-btn:hover { background: #2C4A61; transform: scale(1.1); color: white; }
+@media (max-width: 600px) { .contact-bar { right: 10px; bottom: 70px; flex-direction: row; } .contact-bar-btn { width: 44px; height: 44px; } }
         .guide-hero {
             min-height: 50vh;
             display: flex;
