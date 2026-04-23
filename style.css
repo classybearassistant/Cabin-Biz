@@ -1320,9 +1320,9 @@ style="border:0; width:100%; height:400px; display:block; border-radius:12px;"
     background: var(--color-white);
     padding: var(--space-md);
     border-radius: var(--radius-md);
-    border-left: 3px solid #4A4E45;
-    border: 1px solid #4A4E45;
-   border-left: 3px solid #4A4E45;
+   border-left: 2px solid #B8965A;
+border: 1px solid var(--color-stone);
+border-left: 2px solid #B8965A;
 }
 
 .faq-item h3 {
