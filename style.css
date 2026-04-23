@@ -703,12 +703,12 @@ a.attraction:hover .attraction-distance {
 
 .attraction-distance {
     flex-shrink: 0;
-    width: 64px;
+    width: 72px;
     padding: 0.4rem 0.5rem;
     background: var(--color-dark);
     color: var(--color-white);
     border-radius: var(--radius-sm);
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 500;
     letter-spacing: 1px;
     text-align: center;
