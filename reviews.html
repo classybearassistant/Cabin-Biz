@@ -19,7 +19,6 @@
         gtag('config', 'G-HJ370T5T66');
     </script>
     <style>
-        /* Book Direct Banner */
         .top-banner {
             background: #4a4e45;
             color: rgba(255,255,255,0.9);
@@ -27,11 +26,8 @@
             padding: 0.5rem 1rem;
             font-weight: 600;
             font-size: 0.9rem;
-            letter-spacing: 0.5px;
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1002;
             display: flex;
             align-items: center;
@@ -41,31 +37,16 @@
         }
         .top-banner .banner-text { color: rgba(255,255,255,0.85); }
         .top-banner .banner-btn {
-            background: #B8965A;
-            color: #FFFFFF;
-            border: none;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
+            background: #B8965A; color: #FFFFFF; border: none;
+            padding: 0.4rem 1rem; border-radius: 6px; font-weight: 700;
+            font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;
         }
-        .top-banner .banner-btn:hover { background: #9A7A45; transform: scale(1.05); }
+        .top-banner .banner-btn:hover { background: #9A7A45; }
         @media (max-width: 500px) {
-            .top-banner {
-                flex-direction: row;
-                flex-wrap: nowrap;
-                gap: 0.5rem;
-                padding: 0.4rem 0.75rem;
-                justify-content: space-between;
-            }
+            .top-banner { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; padding: 0.4rem 0.75rem; justify-content: space-between; }
             .top-banner .banner-text { font-size: 0.72rem; flex: 1; text-align: left; }
             .top-banner .banner-btn { font-size: 0.75rem; padding: 0.35rem 0.7rem; white-space: nowrap; flex-shrink: 0; }
         }
-
-        /* Reviews Hero */
         .reviews-hero {
             min-height: 45vh;
             display: flex;
@@ -94,14 +75,6 @@
             z-index: 2;
             padding: 4rem 2rem;
         }
-        .reviews-hero-content .eyebrow {
-            font-size: 0.65rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: #D4AF7A;
-            margin-bottom: 1rem;
-            display: block;
-        }
         .reviews-hero h1 {
             color: #FDFCFA;
             font-family: 'Playfair Display', serif;
@@ -126,8 +99,6 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-
-        /* Contact Bar */
         .contact-bar {
             position: fixed;
             right: 20px;
@@ -138,14 +109,10 @@
             z-index: 997;
         }
         .contact-bar-btn {
-            width: 50px;
-            height: 50px;
-            background: #4A4E45;
-            color: white;
+            width: 50px; height: 50px;
+            background: #4A4E45; color: white;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: flex; align-items: center; justify-content: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             transition: transform 0.2s, background 0.2s;
         }
@@ -154,8 +121,6 @@
             .contact-bar { right: 10px; bottom: 70px; flex-direction: row; gap: 0.5rem; }
             .contact-bar-btn { width: 44px; height: 44px; }
         }
-
-        /* Exit Intent Popup */
         .exit-popup {
             display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.7); z-index: 10000; align-items: center;
@@ -173,27 +138,20 @@
         .exit-popup-content h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
         .exit-popup-content > p { color: #6B6B62; margin-bottom: 1.5rem; }
         .exit-popup-form { display: flex; flex-direction: column; gap: 0.75rem; }
-        .exit-popup-form input {
-            padding: 1rem; border: 2px solid #E0DAD0; border-radius: 4px;
-            font-size: 1rem; text-align: center;
-        }
+        .exit-popup-form input { padding: 1rem; border: 2px solid #E0DAD0; border-radius: 4px; font-size: 1rem; text-align: center; }
         .exit-popup-note { font-size: 0.8rem; color: #6B6B62; margin-top: 1rem; margin-bottom: 0; }
     </style>
 </head>
 <body>
 
-    <!-- Book Direct Banner -->
     <div class="top-banner">
         <span class="banner-text">🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
         <button class="banner-btn" onclick="openBookingModal()">Check Availability</button>
     </div>
 
-    <!-- Navigation -->
     <nav class="navbar scrolled" id="navbar" style="top: 34px;">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:white;letter-spacing:1px;font-style:italic;">
-                Classy Bear Cabin
-            </a>
+            <a href="index.html" class="nav-logo" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:white;letter-spacing:1px;font-style:italic;">Classy Bear Cabin</a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
@@ -209,22 +167,20 @@
             </ul>
         </div>
     </nav>
-<!-- Hero -->
+
     <section class="reviews-hero">
         <div class="reviews-hero-bg"></div>
         <div class="reviews-hero-overlay"></div>
         <div class="reviews-hero-content">
-          
-            <div style="display:inline-flex; align-items:center; gap:0.5rem; margin-top:1rem; background:rgba(28,28,26,0.45); backdrop-filter:blur(8px); padding:0.5rem 1.25rem; border-radius:20px; border:1px solid rgba(255,255,255,0.2);">
-                <span style="color:#D4AF7A; font-size:1rem; letter-spacing:2px;">★★★★★</span>
-                <span style="color:rgba(255,255,255,0.9); font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:500;">148 Verified Reviews</span>
+            <h1>Guest Experiences</h1>
+            <p>Don't just take our word for it — hear what our Classy guests have to say</p>
+            <div style="display:inline-flex;align-items:center;gap:0.5rem;margin-top:1rem;background:rgba(28,28,26,0.45);backdrop-filter:blur(8px);padding:0.5rem 1.25rem;border-radius:20px;border:1px solid rgba(255,255,255,0.2);">
+                <span style="color:#D4AF7A;font-size:1rem;letter-spacing:2px;">★★★★★</span>
+                <span style="color:rgba(255,255,255,0.9);font-size:0.75rem;letter-spacing:2px;text-transform:uppercase;font-weight:500;">148 Verified Reviews</span>
             </div>
         </div>
     </section>
-   
 
-
-    <!-- Reviews Widget -->
     <section class="reviews-section">
         <div class="container">
             <div class="reviews-container">
@@ -234,7 +190,6 @@
         </div>
     </section>
 
-    <!-- CTA -->
     <section class="cta">
         <div class="cta-bg" style="background-image: url('images/gallery/mountain-fog.jpg');"></div>
         <div class="cta-overlay"></div>
@@ -245,7 +200,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
@@ -266,7 +220,6 @@
         </div>
     </footer>
 
-    <!-- Booking Modal -->
     <div id="bookingModal" class="booking-modal">
         <div class="booking-modal-content">
             <button class="booking-modal-close" onclick="closeBookingModal()">&times;</button>
@@ -290,7 +243,6 @@
     </div>
     <script src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336" type="application/javascript"></script>
 
-    <!-- Contact Bar -->
     <div class="contact-bar">
         <a href="tel:+18653259373" class="contact-bar-btn" title="Call Us">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -300,7 +252,6 @@
         </a>
     </div>
 
-    <!-- Exit Intent Popup -->
     <div class="exit-popup" id="exitPopup">
         <div class="exit-popup-content">
             <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
@@ -318,69 +269,27 @@
     <script>
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        function openBookingModal() {
-            document.getElementById('bookingModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeBookingModal() {
-            document.getElementById('bookingModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.getElementById('bookingModal').addEventListener('click', function(e) {
-            if (e.target === this) closeBookingModal();
-        });
-
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
+        function openBookingModal() { document.getElementById('bookingModal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeBookingModal() { document.getElementById('bookingModal').classList.remove('active'); document.body.style.overflow = ''; }
+        document.getElementById('bookingModal').addEventListener('click', function(e) { if (e.target === this) closeBookingModal(); });
         let exitPopupShown = sessionStorage.getItem('exitPopupShown');
-        function showExitPopup() {
-            if (!exitPopupShown) {
-                document.getElementById('exitPopup').classList.add('active');
-                sessionStorage.setItem('exitPopupShown', 'true');
-                exitPopupShown = true;
-            }
-        }
-        function closeExitPopup() {
-            document.getElementById('exitPopup').classList.remove('active');
-        }
+        function showExitPopup() { if (!exitPopupShown) { document.getElementById('exitPopup').classList.add('active'); sessionStorage.setItem('exitPopupShown', 'true'); exitPopupShown = true; } }
+        function closeExitPopup() { document.getElementById('exitPopup').classList.remove('active'); }
         async function handleExitFormSubmit(e) {
             e.preventDefault();
             const emailInput = e.target.querySelector('input');
             const submitBtn = e.target.querySelector('button');
-            emailInput.disabled = true;
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+            emailInput.disabled = true; submitBtn.disabled = true; submitBtn.textContent = 'Sending...';
             const formData = new FormData();
-            formData.append('EMAIL', emailInput.value);
-            formData.append('locale', 'en');
-            formData.append('html_type', 'simple');
+            formData.append('EMAIL', emailInput.value); formData.append('locale', 'en'); formData.append('html_type', 'simple');
             fetch('https://2df60e1c.sibforms.com/serve/MUIFABQ1HX-Z_YywMIZs2TX77xpN3VNYEoC3wlWC4OwTc6ArzeUzyrG0DIyyULv9jYknHs_3LdCaoyzCqpSGAIvAfJlIsR9GuS6frVzS6FRe940qE9yEIzw609an9JE3I11vd3kE6j8haJSGEUilFpv3IecliEwycN8lyu17S07NEz7RmddLS2FlTIjyKI-LVTFHLGrYL7aDqtHcNg==', { method: 'POST', body: formData, mode: 'no-cors' }).catch(() => {});
-            setTimeout(() => {
-                document.querySelector('.exit-popup-content').innerHTML = `
-                    <div class="exit-popup-icon">✅</div>
-                    <h3>You're In!</h3>
-                    <p>Check your email for your <strong>10% discount code</strong> and our Gatlinburg Vacation Guide!</p>
-                    <button class="btn btn-primary" onclick="closeExitPopup()" style="margin-top: 1rem;">Got It!</button>`;
-            }, 1000);
+            setTimeout(() => { document.querySelector('.exit-popup-content').innerHTML = '<div class="exit-popup-icon">✅</div><h3>You\'re In!</h3><p>Check your email for your <strong>10% discount code</strong> and our Gatlinburg Vacation Guide!</p><button class="btn btn-primary" onclick="closeExitPopup()" style="margin-top: 1rem;">Got It!</button>'; }, 1000);
         }
-        document.addEventListener('mouseout', function(e) {
-            if (e.clientY < 10 && !exitPopupShown) showExitPopup();
-        });
-        setTimeout(() => {
-            if (!exitPopupShown && window.innerWidth < 768) showExitPopup();
-        }, 45000);
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') { closeBookingModal(); closeExitPopup(); }
-        });
+        document.addEventListener('mouseout', function(e) { if (e.clientY < 10 && !exitPopupShown) showExitPopup(); });
+        setTimeout(() => { if (!exitPopupShown && window.innerWidth < 768) showExitPopup(); }, 45000);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeBookingModal(); closeExitPopup(); } });
     </script>
 </body>
 </html>
