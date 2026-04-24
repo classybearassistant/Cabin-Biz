@@ -1,7 +1,8 @@
 {
-  "name": "cabin-biz",
-  "compatibility_date": "2026-01-31",
-  "assets": {
-    "directory": "./"
-  }
+    "name": "cabin-biz",
+    "compatibility_date": "2026-01-31",
+    "assets": {
+        "directory": "./"
+    },
+    "exclude": [".git"]
 }
