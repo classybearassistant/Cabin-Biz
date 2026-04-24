@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo Gallery | Classy Bear Cabin</title>
     <meta name="description" content="Browse photos of Classy Bear Cabin - a luxury log cabin retreat in Gatlinburg, TN with stunning mountain views.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://classybearcabin.com/gallery">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,6 +19,37 @@
         gtag('config', 'G-HJ370T5T66');
     </script>
     <style>
+        /* Top Banner */
+        .top-banner {
+            background: #4a4e45;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1002;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .top-banner .banner-text { color: rgba(255,255,255,0.85); }
+        .top-banner .banner-btn {
+            background: #B8965A; color: #FFFFFF; border: none;
+            padding: 0.4rem 1rem; border-radius: 6px; font-weight: 700;
+            font-size: 0.85rem; cursor: pointer; transition: all 0.2s ease;
+        }
+        .top-banner .banner-btn:hover { background: #9A7A45; transform: scale(1.05); }
+        @media (max-width: 500px) {
+            .top-banner { flex-direction: row; flex-wrap: nowrap; gap: 0.5rem; padding: 0.4rem 0.75rem; justify-content: space-between; }
+            .top-banner .banner-text { font-size: 0.72rem; flex: 1; text-align: left; }
+            .top-banner .banner-btn { font-size: 0.75rem; padding: 0.35rem 0.7rem; white-space: nowrap; flex-shrink: 0; }
+        }
+
+        /* Gallery Hero */
         .gallery-hero {
             min-height: 45vh;
             display: flex;
@@ -27,10 +60,11 @@
             color: #FDFCFA;
             margin-top: 70px;
         }
+        @media (max-width: 500px) { .gallery-hero { margin-top: 106px; } }
         .gallery-hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/gallery/hot-tub-view.jpg');
+            background-image: url('images/gallery/loft-windows-view.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -66,9 +100,9 @@
             margin: 0 auto;
             font-weight: 300;
         }
-        .gallery-section {
-            padding: 4rem 0;
-        }
+
+        /* Gallery Sections */
+        .gallery-section { padding: 4rem 0; }
         .gallery-section-title {
             text-align: center;
             font-family: 'Playfair Display', serif;
@@ -93,6 +127,7 @@
             aspect-ratio: 4/3;
             cursor: pointer;
             background: #EDE8DF;
+            border: 1px solid #4A4E45;
         }
         .gallery-item img {
             width: 100%;
@@ -101,15 +136,10 @@
             transition: transform 0.6s ease;
             filter: saturate(0.95);
         }
-        .gallery-item:hover img {
-            transform: scale(1.04);
-            filter: saturate(1.05);
-        }
+        .gallery-item:hover img { transform: scale(1.04); filter: saturate(1.05); }
         .caption {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             padding: 0.75rem 1rem;
             background: linear-gradient(transparent, rgba(28,28,26,0.75));
             color: white;
@@ -119,76 +149,61 @@
             opacity: 0;
             transition: opacity 0.3s ease;
         }
-        .gallery-item:hover .caption {
-            opacity: 1;
-        }
+        .gallery-item:hover .caption { opacity: 1; }
+
+        /* Lightbox */
         .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(28,28,26,0.97);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
+            display: none; position: fixed; inset: 0;
+            background: rgba(28,28,26,0.97); z-index: 9999;
+            justify-content: center; align-items: center;
         }
         .lightbox.active { display: flex; }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: rgba(255,255,255,0.7);
-            font-size: 2rem;
-            cursor: pointer;
-            font-weight: 300;
-        }
+        .lightbox img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 4px; }
+        .lightbox-close { position: absolute; top: 20px; right: 30px; color: rgba(255,255,255,0.7); font-size: 2rem; cursor: pointer; font-weight: 300; }
         .lightbox-close:hover { color: white; }
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgba(255,255,255,0.6);
-            font-size: 2.5rem;
-            cursor: pointer;
-            padding: 1rem;
-            user-select: none;
-            font-weight: 300;
-        }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.6); font-size: 2.5rem; cursor: pointer; padding: 1rem; user-select: none; font-weight: 300; }
         .lightbox-nav:hover { color: white; }
         .lightbox-prev { left: 20px; }
         .lightbox-next { right: 20px; }
-        .section-divider {
-            height: 1px;
-            background: #E0DAD0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        @media (max-width: 900px) {
-            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .gallery-grid { grid-template-columns: 1fr; padding: 0 1rem 1rem; }
-        }
+
+        .section-divider { height: 1px; background: #E0DAD0; max-width: 1200px; margin: 0 auto; }
+
+        @media (max-width: 900px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; padding: 0 1rem 1rem; } }
+
+        /* Contact Bar */
+        .contact-bar { position: fixed; right: 20px; bottom: 100px; display: flex; flex-direction: column; gap: 0.75rem; z-index: 997; }
+        .contact-bar-btn { width: 50px; height: 50px; background: #4A4E45; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.2s, background 0.2s; }
+        .contact-bar-btn:hover { background: #2C4A61; transform: scale(1.1); color: white; }
+        @media (max-width: 600px) { .contact-bar { right: 10px; bottom: 70px; flex-direction: row; gap: 0.5rem; } .contact-bar-btn { width: 44px; height: 44px; } }
+
+        /* Exit Popup */
+        .exit-popup { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 10000; align-items: center; justify-content: center; padding: 1rem; }
+        .exit-popup.active { display: flex; }
+        .exit-popup-content { background: white; border-radius: 10px; padding: 3rem 2rem; max-width: 450px; text-align: center; position: relative; animation: popupSlide 0.3s ease; }
+        @keyframes popupSlide { from { transform: translateY(-30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        .exit-popup-close { position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #6B6B62; }
+        .exit-popup-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .exit-popup-content h3 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+        .exit-popup-content > p { color: #6B6B62; margin-bottom: 1.5rem; }
+        .exit-popup-form { display: flex; flex-direction: column; gap: 0.75rem; }
+        .exit-popup-form input { padding: 1rem; border: 2px solid #E0DAD0; border-radius: 4px; font-size: 1rem; text-align: center; }
+        .exit-popup-note { font-size: 0.8rem; color: #6B6B62; margin-top: 1rem; margin-bottom: 0; }
     </style>
 </head>
 <body>
 
     <!-- Top Banner -->
-    <div style="background:#354B2F;color:rgba(255,255,255,0.9);text-align:center;padding:0.6rem 1rem;font-size:0.75rem;font-weight:500;letter-spacing:1.5px;position:fixed;top:0;left:0;right:0;z-index:1002;display:flex;align-items:center;justify-content:center;gap:1rem;">
-        <span>🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
-        <a href="index.html#booking" style="background:#B8965A;color:white;padding:0.35rem 1rem;border-radius:4px;font-weight:600;font-size:0.75rem;text-decoration:none;">Check Availability</a>
+    <div class="top-banner">
+        <span class="banner-text">🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
+        <button class="banner-btn" onclick="openBookingModal()">Check Availability</button>
     </div>
 
     <!-- Navigation -->
-    <nav class="navbar scrolled" id="navbar" style="top:34px;">
+    <nav class="navbar scrolled" id="navbar" style="top: 34px;">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="images/logo-transparent.png" alt="Classy Bear Cabin" class="logo-img">
+            <a href="index.html" class="nav-logo" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:400;color:white;letter-spacing:1px;font-style:italic;">
+                Classy Bear Cabin
             </a>
             <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -196,7 +211,7 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="index.html#amenities">Amenities</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="book-direct.html">Why Book Direct</a></li>
                 <li><a href="local-guide.html">Things to Do</a></li>
                 <li><a href="reviews.html">Reviews</a></li>
@@ -221,66 +236,21 @@
     <section class="gallery-section" style="background:#FDFCFA;">
         <h2 class="gallery-section-title">🏔️ The Cabin & Views</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(0)">
-                <img src="images/gallery/cabin-sign.jpg" alt="Classy Bear Cabin entrance sign" loading="lazy">
-                <div class="caption">Welcome to Classy Bear Cabin</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(1)">
-                <img src="images/gallery/cabin-exterior-drone.jpg" alt="Aerial view of cabin" loading="lazy">
-                <div class="caption">Aerial View</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(2)">
-                <img src="images/gallery/cabin-drone-front.jpg" alt="Cabin front drone shot" loading="lazy">
-                <div class="caption">A-Frame Windows & Decks</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(3)">
-                <img src="images/gallery/cabin-entrance.jpg" alt="Cabin exterior" loading="lazy">
-                <div class="caption">Cabin Exterior</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(4)">
-                <img src="images/gallery/rainbow.jpg" alt="Rainbow over mountains" loading="lazy">
-                <div class="caption">Rainbow Over the Smokies</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(5)">
-                <img src="images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg" loading="lazy">
-                <div class="caption">Gatlinburg & the Smokies</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(6)">
-                <img src="images/gallery/mountain-fog.jpg" alt="Misty mountain morning" loading="lazy">
-                <div class="caption">Misty Mountain Morning</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(7)">
-                <img src="images/gallery/deck-view-1.jpg" alt="Deck view" loading="lazy">
-                <div class="caption">Morning Coffee View</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(8)">
-                <img src="images/gallery/summer-deck.jpg" alt="Summer deck view" loading="lazy">
-                <div class="caption">Summer on the Deck</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(9)">
-                <img src="images/gallery/mountain-view-1.jpg" alt="Ober Mountain" loading="lazy">
-                <div class="caption">Ober Mountain View</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(10)">
-                <img src="images/gallery/mountain-view-3.jpg" alt="Layered mountains" loading="lazy">
-                <div class="caption">Mountain Layers</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(11)">
-                <img src="images/gallery/snow-view.jpg" alt="Winter view" loading="lazy">
-                <div class="caption">Winter Wonderland</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(12)">
-                <img src="images/gallery/moonrise-mountains.jpg" alt="Moonrise over mountains" loading="lazy">
-                <div class="caption">Moonrise Over the Smokies</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(13)">
-                <img src="images/gallery/winter-mountain-view.jpg" alt="Winter mountain vista" loading="lazy">
-                <div class="caption">Winter Mountain Vista</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(14)">
-                <img src="images/gallery/cabin-neighborhood.jpg" alt="Mountain cabin community" loading="lazy">
-                <div class="caption">Nestled in the Mountains</div>
-            </div>
+            <div class="gallery-item" onclick="openLightbox(0)"><img src="images/gallery/cabin-sign.jpg" alt="Classy Bear Cabin entrance sign" loading="lazy"><div class="caption">Welcome to Classy Bear Cabin</div></div>
+            <div class="gallery-item" onclick="openLightbox(1)"><img src="images/gallery/cabin-exterior-drone.jpg" alt="Aerial view of cabin" loading="lazy"><div class="caption">Aerial View</div></div>
+            <div class="gallery-item" onclick="openLightbox(2)"><img src="images/gallery/cabin-drone-front.jpg" alt="Cabin front drone shot" loading="lazy"><div class="caption">A-Frame Windows & Decks</div></div>
+            <div class="gallery-item" onclick="openLightbox(3)"><img src="images/gallery/cabin-entrance.jpg" alt="Cabin exterior" loading="lazy"><div class="caption">Cabin Exterior</div></div>
+            <div class="gallery-item" onclick="openLightbox(4)"><img src="images/gallery/rainbow.jpg" alt="Rainbow over mountains" loading="lazy"><div class="caption">Rainbow Over the Smokies</div></div>
+            <div class="gallery-item" onclick="openLightbox(5)"><img src="images/gallery/aerial-gatlinburg.jpg" alt="Aerial view of Gatlinburg" loading="lazy"><div class="caption">Gatlinburg & the Smokies</div></div>
+            <div class="gallery-item" onclick="openLightbox(6)"><img src="images/gallery/mountain-fog.jpg" alt="Misty mountain morning" loading="lazy"><div class="caption">Misty Mountain Morning</div></div>
+            <div class="gallery-item" onclick="openLightbox(7)"><img src="images/gallery/deck-view-1.jpg" alt="Deck view" loading="lazy"><div class="caption">Morning Coffee View</div></div>
+            <div class="gallery-item" onclick="openLightbox(8)"><img src="images/gallery/summer-deck.jpg" alt="Summer deck view" loading="lazy"><div class="caption">Summer on the Deck</div></div>
+            <div class="gallery-item" onclick="openLightbox(9)"><img src="images/gallery/mountain-view-1.jpg" alt="Ober Mountain" loading="lazy"><div class="caption">Ober Mountain View</div></div>
+            <div class="gallery-item" onclick="openLightbox(10)"><img src="images/gallery/mountain-view-3.jpg" alt="Layered mountains" loading="lazy"><div class="caption">Mountain Layers</div></div>
+            <div class="gallery-item" onclick="openLightbox(11)"><img src="images/gallery/snow-view.jpg" alt="Winter view" loading="lazy"><div class="caption">Winter Wonderland</div></div>
+            <div class="gallery-item" onclick="openLightbox(12)"><img src="images/gallery/moonrise-mountains.jpg" alt="Moonrise over mountains" loading="lazy"><div class="caption">Moonrise Over the Smokies</div></div>
+            <div class="gallery-item" onclick="openLightbox(13)"><img src="images/gallery/winter-mountain-view.jpg" alt="Winter mountain vista" loading="lazy"><div class="caption">Winter Mountain Vista</div></div>
+            <div class="gallery-item" onclick="openLightbox(14)"><img src="images/gallery/cabin-neighborhood.jpg" alt="Mountain cabin community" loading="lazy"><div class="caption">Nestled in the Mountains</div></div>
         </div>
     </section>
 
@@ -290,90 +260,27 @@
     <section class="gallery-section" style="background:#F5F1EB;">
         <h2 class="gallery-section-title">🏠 Interior & Amenities</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(15)">
-                <img src="images/gallery/living-dining-main.jpg" alt="Open concept living dining" loading="lazy">
-                <div class="caption">Open Concept Living</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(16)">
-                <img src="images/gallery/kitchen-herringbone-full.jpg" alt="Herringbone backsplash kitchen" loading="lazy">
-                <div class="caption">#KeepItClassy Kitchen</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(17)">
-                <img src="images/gallery/kitchen-herringbone-detail.jpg" alt="Herringbone wood detail" loading="lazy">
-                <div class="caption">Herringbone Wood Backsplash</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(18)">
-                <img src="images/gallery/kitchen-1.jpg" alt="Renovated kitchen" loading="lazy">
-                <div class="caption">Gourmet Kitchen</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(19)">
-                <img src="images/gallery/kitchen-2.jpg" alt="Full kitchen" loading="lazy">
-                <div class="caption">Fully Equipped</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(20)">
-                <img src="images/gallery/kitchen-renovated.jpg" alt="2026 renovation" loading="lazy">
-                <div class="caption">Newly Renovated Kitchen (2026)</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(21)">
-                <img src="images/gallery/loft-bedroom-views.jpg" alt="Loft bedroom mountain views" loading="lazy">
-                <div class="caption">Loft with Epic Views</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(22)">
-                <img src="images/gallery/loft-windows-view.jpg" alt="A-frame windows" loading="lazy">
-                <div class="caption">Stunning A-Frame Windows</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(23)">
-                <img src="images/gallery/bunk-room-pacman.jpg" alt="Bunk room arcade" loading="lazy">
-                <div class="caption">Bunk Room with Pac-Man!</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(24)">
-                <img src="images/gallery/bedroom-highland-cow-1.jpg" alt="Highland cow suite" loading="lazy">
-                <div class="caption">Highland Cow Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(25)">
-                <img src="images/gallery/bedroom-highland-cow-2.jpg" alt="Highland cow bedroom" loading="lazy">
-                <div class="caption">Cozy Highland Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(26)">
-                <img src="images/gallery/bedroom-circus-animals.jpg" alt="Circus suite" loading="lazy">
-                <div class="caption">Circus Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(27)">
-                <img src="images/gallery/bedroom-bear.jpg" alt="Master bedroom" loading="lazy">
-                <div class="caption">Master Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(28)">
-                <img src="images/gallery/bedroom-tv.jpg" alt="Bedroom with fireplace" loading="lazy">
-                <div class="caption">Electric Fireplace Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(29)">
-                <img src="images/gallery/bedroom-2.jpg" alt="Guest bedroom" loading="lazy">
-                <div class="caption">Guest Suite</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(30)">
-                <img src="images/gallery/bathroom-whirlpool-bears.jpg" alt="Whirlpool tub bathroom" loading="lazy">
-                <div class="caption">Whirlpool Tub with Bear Art</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(31)">
-                <img src="images/gallery/whirlpool-led-purple.jpg" alt="Chromotherapy LED tub" loading="lazy">
-                <div class="caption">Chromotherapy Whirlpool</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(32)">
-                <img src="images/gallery/bathroom-shower-combo.jpg" alt="Walk-in shower combo" loading="lazy">
-                <div class="caption">Shower & Whirlpool Combo</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(33)">
-                <img src="images/gallery/bathroom-whirlpool.jpg" alt="Master bathroom 2026" loading="lazy">
-                <div class="caption">Master Bathroom (2026 Reno)</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(34)">
-                <img src="images/gallery/hot-tub.jpg" alt="Hot tub with view" loading="lazy">
-                <div class="caption">Hot Tub with Mountain Views</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(35)">
-                <img src="images/gallery/classy-dog-portraits.jpg" alt="Classy dog portraits" loading="lazy">
-                <div class="caption">Classy Pups 🎩</div>
-            </div>
+            <div class="gallery-item" onclick="openLightbox(15)"><img src="images/gallery/living-dining-main.jpg" alt="Open concept living dining" loading="lazy"><div class="caption">Open Concept Living</div></div>
+            <div class="gallery-item" onclick="openLightbox(16)"><img src="images/gallery/kitchen-herringbone-full.jpg" alt="Herringbone backsplash kitchen" loading="lazy"><div class="caption">#KeepItClassy Kitchen</div></div>
+            <div class="gallery-item" onclick="openLightbox(17)"><img src="images/gallery/kitchen-herringbone-detail.jpg" alt="Herringbone wood detail" loading="lazy"><div class="caption">Herringbone Wood Backsplash</div></div>
+            <div class="gallery-item" onclick="openLightbox(18)"><img src="images/gallery/kitchen-1.jpg" alt="Renovated kitchen" loading="lazy"><div class="caption">Gourmet Kitchen</div></div>
+            <div class="gallery-item" onclick="openLightbox(19)"><img src="images/gallery/kitchen-2.jpg" alt="Full kitchen" loading="lazy"><div class="caption">Fully Equipped</div></div>
+            <div class="gallery-item" onclick="openLightbox(20)"><img src="images/gallery/kitchen-renovated.jpg" alt="2026 renovation" loading="lazy"><div class="caption">Newly Renovated Kitchen (2026)</div></div>
+            <div class="gallery-item" onclick="openLightbox(21)"><img src="images/gallery/loft-bedroom-views.jpg" alt="Loft bedroom mountain views" loading="lazy"><div class="caption">Loft with Epic Views</div></div>
+            <div class="gallery-item" onclick="openLightbox(22)"><img src="images/gallery/loft-windows-view.jpg" alt="A-frame windows" loading="lazy"><div class="caption">Stunning A-Frame Windows</div></div>
+            <div class="gallery-item" onclick="openLightbox(23)"><img src="images/gallery/bunk-room-pacman.jpg" alt="Bunk room arcade" loading="lazy"><div class="caption">Bunk Room with Pac-Man!</div></div>
+            <div class="gallery-item" onclick="openLightbox(24)"><img src="images/gallery/bedroom-highland-cow-1.jpg" alt="Highland cow suite" loading="lazy"><div class="caption">Highland Cow Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(25)"><img src="images/gallery/bedroom-highland-cow-2.jpg" alt="Highland cow bedroom" loading="lazy"><div class="caption">Cozy Highland Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(26)"><img src="images/gallery/bedroom-circus-animals.jpg" alt="Circus suite" loading="lazy"><div class="caption">Circus Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(27)"><img src="images/gallery/bedroom-bear.jpg" alt="Master bedroom" loading="lazy"><div class="caption">Master Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(28)"><img src="images/gallery/bedroom-tv.jpg" alt="Bedroom with fireplace" loading="lazy"><div class="caption">Electric Fireplace Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(29)"><img src="images/gallery/bedroom-2.jpg" alt="Guest bedroom" loading="lazy"><div class="caption">Guest Suite</div></div>
+            <div class="gallery-item" onclick="openLightbox(30)"><img src="images/gallery/bathroom-whirlpool-bears.jpg" alt="Whirlpool tub bathroom" loading="lazy"><div class="caption">Whirlpool Tub with Bear Art</div></div>
+            <div class="gallery-item" onclick="openLightbox(31)"><img src="images/gallery/whirlpool-led-purple.jpg" alt="Chromotherapy LED tub" loading="lazy"><div class="caption">Chromotherapy Whirlpool</div></div>
+            <div class="gallery-item" onclick="openLightbox(32)"><img src="images/gallery/bathroom-shower-combo.jpg" alt="Walk-in shower combo" loading="lazy"><div class="caption">Shower & Whirlpool Combo</div></div>
+            <div class="gallery-item" onclick="openLightbox(33)"><img src="images/gallery/bathroom-whirlpool.jpg" alt="Master bathroom 2026" loading="lazy"><div class="caption">Master Bathroom (2026 Reno)</div></div>
+            <div class="gallery-item" onclick="openLightbox(34)"><img src="images/gallery/hot-tub.jpg" alt="Hot tub with view" loading="lazy"><div class="caption">Hot Tub with Mountain Views</div></div>
+            <div class="gallery-item" onclick="openLightbox(35)"><img src="images/gallery/classy-dog-portraits.jpg" alt="Classy dog portraits" loading="lazy"><div class="caption">Classy Pups 🎩</div></div>
         </div>
     </section>
 
@@ -402,7 +309,7 @@
 
     <!-- CTA -->
     <section class="cta">
-        <div class="cta-bg" style="background-image: url('images/gallery/hot-tub-view.jpg');"></div>
+        <div class="cta-bg" style="background-image: url('images/gallery/summer-deck.jpg');"></div>
         <div class="cta-overlay"></div>
         <div class="cta-content">
             <h2>Like What You See?</h2>
@@ -441,9 +348,45 @@
                 data-widget-color="#B8965A"
                 data-text-check-availability="Check Availability"
                 data-text-book-now="Book Now"></div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <span>Secure Checkout</span>
+                </div>
+                <div class="trust-badge payment-cards">
+                    <span class="card-brand visa">VISA</span>
+                    <span class="card-brand mastercard">Mastercard</span>
+                    <span class="card-brand amex">AMEX</span>
+                </div>
+            </div>
         </div>
     </div>
     <script src="//www.igms.com/app/widgets/direct-booking/widget.js?v=12-54336" type="application/javascript"></script>
+
+    <!-- Contact Bar -->
+    <div class="contact-bar">
+        <a href="tel:+18653259373" class="contact-bar-btn" title="Call Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        </a>
+        <a href="mailto:info@classybearcabin.com" class="contact-bar-btn" title="Email Us">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+    </div>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exitPopup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+            <div class="exit-popup-icon">🎁</div>
+            <h3>Wait! Get 10% Off Your First Direct Booking</h3>
+            <p>Join our list and we'll send you a discount code + our free Gatlinburg Vacation Guide!</p>
+            <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-primary">Send My Discount</button>
+            </form>
+            <p class="exit-popup-note">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+    </div>
 
     <script>
         const images = [
@@ -511,22 +454,29 @@
 
         const navToggle = document.getElementById('nav-toggle');
         const navMenu = document.getElementById('nav-menu');
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
+        navToggle.addEventListener('click', () => { navMenu.classList.toggle('active'); navToggle.classList.toggle('active'); });
+        document.querySelectorAll('.nav-menu a').forEach(link => { link.addEventListener('click', () => { navMenu.classList.remove('active'); navToggle.classList.remove('active'); }); });
 
-        function openBookingModal() {
-            document.getElementById('bookingModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
+        function openBookingModal() { document.getElementById('bookingModal').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeBookingModal() { document.getElementById('bookingModal').classList.remove('active'); document.body.style.overflow = ''; }
+        document.getElementById('bookingModal').addEventListener('click', function(e) { if (e.target === this) closeBookingModal(); });
+
+        let exitPopupShown = sessionStorage.getItem('exitPopupShown');
+        function showExitPopup() { if (!exitPopupShown) { document.getElementById('exitPopup').classList.add('active'); sessionStorage.setItem('exitPopupShown', 'true'); exitPopupShown = true; } }
+        function closeExitPopup() { document.getElementById('exitPopup').classList.remove('active'); }
+        async function handleExitFormSubmit(e) {
+            e.preventDefault();
+            const emailInput = e.target.querySelector('input');
+            const submitBtn = e.target.querySelector('button');
+            emailInput.disabled = true; submitBtn.disabled = true; submitBtn.textContent = 'Sending...';
+            const formData = new FormData();
+            formData.append('EMAIL', emailInput.value); formData.append('locale', 'en'); formData.append('html_type', 'simple');
+            fetch('https://2df60e1c.sibforms.com/serve/MUIFABQ1HX-Z_YywMIZs2TX77xpN3VNYEoC3wlWC4OwTc6ArzeUzyrG0DIyyULv9jYknHs_3LdCaoyzCqpSGAIvAfJlIsR9GuS6frVzS6FRe940qE9yEIzw609an9JE3I11vd3kE6j8haJSGEUilFpv3IecliEwycN8lyu17S07NEz7RmddLS2FlTIjyKI-LVTFHLGrYL7aDqtHcNg==', { method: 'POST', body: formData, mode: 'no-cors' }).catch(() => {});
+            setTimeout(() => { document.querySelector('.exit-popup-content').innerHTML = '<div class="exit-popup-icon">✅</div><h3>You\'re In!</h3><p>Check your email for your <strong>10% discount code</strong> and our Gatlinburg Vacation Guide!</p><button class="btn btn-primary" onclick="closeExitPopup()" style="margin-top: 1rem;">Got It!</button>'; }, 1000);
         }
-        function closeBookingModal() {
-            document.getElementById('bookingModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.getElementById('bookingModal').addEventListener('click', function(e) {
-            if (e.target === this) closeBookingModal();
-        });
+        document.addEventListener('mouseout', function(e) { if (e.clientY < 10 && !exitPopupShown) showExitPopup(); });
+        setTimeout(() => { if (!exitPopupShown && window.innerWidth < 768) showExitPopup(); }, 45000);
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closeBookingModal(); closeExitPopup(); } });
     </script>
 </body>
 </html>
