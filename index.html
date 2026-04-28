@@ -494,7 +494,7 @@
             }
         }
 
-        /* Exit Intent Popup */
+   /* Exit Intent Popup - Luxury Brand Styling */
         .exit-popup {
             display: none;
             position: fixed;
@@ -502,7 +502,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.7);
+            background: rgba(28, 28, 26, 0.75);
             z-index: 10000;
             align-items: center;
             justify-content: center;
@@ -512,13 +512,15 @@
             display: flex;
         }
         .exit-popup-content {
-            background: white;
-            border-radius: var(--radius-lg);
+            background: #FAF6EE;
+            border-radius: 12px;
             padding: 3rem 2rem;
             max-width: 450px;
             text-align: center;
             position: relative;
             animation: popupSlide 0.3s ease;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 1px solid #E8DFD0;
         }
         @keyframes popupSlide {
             from { transform: translateY(-30px); opacity: 0; }
@@ -532,19 +534,28 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--color-text-light);
+            color: #8B8275;
+            transition: color 0.2s ease;
+        }
+        .exit-popup-close:hover {
+            color: #5C5A4A;
         }
         .exit-popup-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
         .exit-popup-content h3 {
-            font-size: 1.5rem;
+            font-size: 1.65rem;
             margin-bottom: 0.75rem;
+            color: #5C5A4A;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
         .exit-popup-content > p {
-            color: var(--color-text-light);
+            color: #2D2A26;
             margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
         .exit-popup-form {
             display: flex;
@@ -553,22 +564,42 @@
         }
         .exit-popup-form input {
             padding: 1rem;
-            border: 2px solid var(--color-stone);
-            border-radius: var(--radius-sm);
+            border: 2px solid #E8DFD0;
+            border-radius: 6px;
             font-size: 1rem;
             text-align: center;
+            background: white;
+            color: #2D2A26;
+            transition: border-color 0.2s ease;
         }
         .exit-popup-form input:focus {
             outline: none;
-            border-color: var(--color-primary);
+            border-color: #B8975A;
+        }
+        .exit-popup-form .btn-primary {
+            background: #B8975A;
+            color: white;
+            border: none;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .exit-popup-form .btn-primary:hover {
+            background: #9A7A45;
+            transform: translateY(-1px);
         }
         .exit-popup-note {
             font-size: 0.8rem;
-            color: var(--color-text-light);
+            color: #8B8275;
             margin-top: 1rem;
             margin-bottom: 0;
+            font-style: italic;
         }
-
         /* Social Proof Notifications */
         .social-proof {
             position: fixed;
