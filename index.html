@@ -1258,19 +1258,20 @@
     </div>
 </footer>
 
-    <!-- Exit Intent Popup -->
-    <div class="exit-popup" id="exitPopup">
-        <div class="exit-popup-content">
-            <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
-            <div class="exit-popup-icon">🎁</div>
-            <h3>Wait! Get 15% Off Your First Direct Booking</h3>
-            <p>We'll email your discount code along with our Insider's Gatlinburg Vacation Guide — the restaurants, hidden trails, and seasonal favorites we reserve for our Classy Guests.</p>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit" class="btn btn-primary">Send My Discount</button>
-            </form>
-            <p class="exit-popup-note">No Spam Ever. We Keep it Classy 🐻</p>
-        </div>
+   <!-- Exit Intent Popup -->
+<div class="exit-popup" id="exitPopup">
+    <div class="exit-popup-content">
+        <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close popup">×</button>
+        <div class="exit-popup-icon">🎁</div>
+        <h3>Wait! Get 15% Off Your First Direct Booking</h3>
+        <p>We'll email your discount code along with our Insider's Gatlinburg Vacation Guide — the restaurants, hidden trails, and seasonal favorites we reserve for our Classy Guests.</p>
+        <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit" class="btn-primary">Send My Discount</button>
+        </form>
+        <p class="exit-popup-note">No Spam Ever. We Keep it Classy 🐻</p>
     </div>
+</div>
 
     <!-- Contact Bar -->
     <div class="contact-bar">
