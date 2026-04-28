@@ -1265,10 +1265,13 @@
         <div class="exit-popup-icon">🎁</div>
         <h3>Wait! Get 15% Off Your First Direct Booking</h3>
         <p>We'll email your discount code along with the <em>Classy Insiders' Guide to Gatlinburg</em> — the restaurants, hidden trails, and seasonal favorites we reserve for our Classy Guests.</p>
-        <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit" class="btn-primary">Send My Discount</button>
-        </form>
+       <form class="exit-popup-form" onsubmit="handleExitFormSubmit(event)">
+    <input type="email" placeholder="Enter your email" required>
+    <!-- Honeypot: invisible to humans, bots fill it in -->
+    <input type="text" name="website" tabindex="-1" autocomplete="off"
+           style="position:absolute; left:-9999px; opacity:0;" aria-hidden="true">
+    <button type="submit" class="btn-primary">Send My Discount</button>
+</form>
         <p class="exit-popup-note">No Spam Ever. We Keep it Classy 🐻</p>
     </div>
 </div>
@@ -1390,10 +1393,22 @@
         }
         
         async function handleExitFormSubmit(e) {
-            e.preventDefault();
-            const emailInput = e.target.querySelector('input');
-            const submitBtn = e.target.querySelector('button');
-            const email = emailInput.value;
+    e.preventDefault();
+
+    // Bot check: if honeypot is filled, silently reject
+    const honeypot = e.target.querySelector('input[name="website"]');
+    if (honeypot && honeypot.value) {
+        document.querySelector('.exit-popup-content').innerHTML = `
+            <div class="exit-popup-icon">✅</div>
+            <h3>You're In!</h3>
+            <p>Check your email!</p>
+        `;
+        return;
+    }
+
+    const emailInput = e.target.querySelector('input[type="email"]');
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    const email = emailInput.value;
             
             // Disable form while submitting
             emailInput.disabled = true;
