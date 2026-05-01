@@ -747,7 +747,7 @@
     <!-- Book Direct Banner -->
     <div class="top-banner">
         <span class="banner-text">🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
-        <button class="banner-btn" onclick="openBookingModal()">Check Availability</button>
+        <button class="banner-btn" onclick="openBookingModal('top_banner')">Check Availability</button>
     </div>
 
     <!-- Navigation -->
@@ -788,7 +788,7 @@
             <h1 style="text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Classy Bear Cabin</h1>
             <p class="hero-subtitle">Summit Views · Hot Tub · 3 King Beds</p>
             <div style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <button class="btn btn-primary btn-large" onclick="openBookingModal()">Check Availability</button>
+    <button class="btn btn-primary btn-large" onclick="openBookingModal('hero')">Check Availability</button>
             </div>
             <div class="hero-rating" style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -1117,7 +1117,7 @@
         <div class="cta-content">
             <h2>Ready for Your Mountain Getaway?</h2>
             <p>Book direct and save 15% — create memories that last a lifetime</p>
-            <button class="btn btn-primary btn-large" onclick="openBookingModal()">Check Availability</button>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal('cta_section')">Check Availability</button>
         </div>
     </section>
 
@@ -1220,7 +1220,7 @@
                     <div class="contact-card">
                         <div class="contact-icon">🌐</div>
                         <h4>Book Online</h4>
-                        <p><a href="#" onclick="openBookingModal(); return false;">Check Availability</a></p>
+                        <p><a href="#" onclick="openBookingModal('contact_link'); return false;">Check Availability</a></p>
                     </div>
                 </div>
                 <div class="contact-features">
@@ -1350,8 +1350,40 @@
             observer.observe(el);
         });
 
+       // Track phone clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'phone_click', {
+                        'event_category': 'engagement',
+                        'event_label': link.href.replace('tel:', '')
+                    });
+                }
+            });
+        });
+
+        // Track email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', () => {
+                if (typeof gtag === 'function') {
+                    gtag('event', 'email_click', {
+                        'event_category': 'engagement',
+                        'event_label': link.href.replace('mailto:', '')
+                    });
+                }
+            });
+        });
+
         // Booking Modal
-        function openBookingModal() {
+        function openBookingModal(source) {
+            // GA4 event tracking
+            if (typeof gtag === 'function') {
+                gtag('event', 'book_now_click', {
+                    'event_category': 'engagement',
+                    'event_label': source || 'unknown',
+                    'value': 1
+                });
+            }
             document.getElementById('bookingModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
