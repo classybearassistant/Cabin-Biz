@@ -7,3 +7,6 @@
 /blog/dollywood-family-trip-guide.html /blog/dollywood-family-trip-guide 301
 /blog/gatlinburg-cabin-rental-guide.html /blog/gatlinburg-cabin-rental-guide 301
 /en/* / 301
+http://classybearcabin.com/* https://classybearcabin.com/:splat 301
+http://www.classybearcabin.com/* https://classybearcabin.com/:splat 301
+https://www.classybearcabin.com/* https://classybearcabin.com/:splat 301
