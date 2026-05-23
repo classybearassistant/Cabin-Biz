@@ -702,10 +702,10 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#amenities">Amenities</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery">Gallery</a></li>
                 <li><a href="book-direct.html">Why Book Direct</a></li>
                 <li><a href="local-guide.html">Things to Do</a></li>
-                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="reviews">Reviews</a></li>
                 <li><a href="blog/">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#" class="btn btn-nav" onclick="openBookingModal(); return false;">Book Now</a></li>
@@ -994,7 +994,7 @@
                 </div>
             </div>
             <div style="text-align: center; margin-top: 2rem;">
-                <a href="gallery.html" class="btn btn-primary">View Full Gallery</a>
+                <a href="gallery" class="btn btn-primary">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -1193,10 +1193,10 @@
                 <div class="footer-links">
                     <a href="#home">Home</a>
                     <a href="#amenities">Amenities</a>
-                    <a href="gallery.html">Gallery</a>
+                    <a href="gallery">Gallery</a>
                     <a href="book-direct.html">Why Book Direct</a>
                     <a href="local-guide.html">Things to Do</a>
-                    <a href="reviews.html">Reviews</a>
+                    <a href="reviews">Reviews</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-socials">
