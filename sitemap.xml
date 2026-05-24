@@ -3,128 +3,202 @@
 
   <url>
     <loc>https://classybearcabin.com/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/why-book-direct</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/things-to-do</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/location</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/reviews</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/gallery</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/chalet-village-gatlinburg-cabin</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.8</priority>
   </url>
 
+  <!-- Original blog posts -->
   <url>
     <loc>https://classybearcabin.com/blog/april-gatlinburg-guide</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/christmas-in-the-smokies</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/classy-things-to-do-gatlinburg</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/dollywood-family-trip-guide</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/gatlinburg-cabin-rental-guide</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/may-events-gatlinburg-2026</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/spring-break-gatlinburg-cabin</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/sunrise-moonrise-gatlinburg</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/things-to-do-gatlinburg</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/valentines-day-getaway-gatlinburg</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/what-makes-us-classy</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/why-guests-love-classy-bear</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://classybearcabin.com/blog/winter-wonderland-gatlinburg</loc>
-    <lastmod>2026-05-23</lastmod>
+    <lastmod>2026-05-24</lastmod>
     <priority>0.6</priority>
+  </url>
+
+  <!-- New automated blog posts -->
+  <url>
+    <loc>https://classybearcabin.com/blog/why-chalet-village-best-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/top-5-smoky-mountain-hiking-trails/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/what-to-pack-gatlinburg-cabin-getaway/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/romantic-getaways-gatlinburg-tn/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/family-vacations-classy-bear-cabin/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/best-restaurants-near-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/how-to-get-to-chalet-village-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/gatlinburg-vs-pigeon-forge/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/what-is-chalet-village-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/best-waterfalls-near-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/cabin-rental-vs-hotel-gatlinburg/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://classybearcabin.com/blog/things-to-do-gatlinburg-with-kids/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
