@@ -746,7 +746,7 @@
     <!-- Book Direct Banner -->
     <div class="top-banner">
         <span class="banner-text">🎉 <strong>BOOK DIRECT & SAVE 15%</strong> → No OTA Fees</span>
-        <button class="banner-btn" onclick="openBookingModal('top_banner')">Check Availability</button>
+        <button class="banner-btn" onclick="openBookingModal('top_banner'); gtag('event', 'begin_checkout', {'event_category': 'booking', 'event_label': 'top_banner'});">Check Availability</button>
     </div>
 
     <!-- Navigation -->
@@ -787,7 +787,7 @@
             <h1 style="text-shadow: 0 2px 8px rgba(0,0,0,0.3);">Classy Bear Cabin</h1>
             <p class="hero-subtitle">Summit Views · Hot Tub · 3 King Beds</p>
             <div style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
-    <button class="btn btn-primary btn-large" onclick="openBookingModal('hero')">Check Availability</button>
+    <button class="btn btn-primary btn-large" onclick="openBookingModal('hero'); gtag('event', 'begin_checkout', {'event_category': 'booking', 'event_label': 'hero'});">Check Availability</button>
             </div>
             <div class="hero-rating" style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; margin-top: 1rem;">
     <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -1116,7 +1116,7 @@
         <div class="cta-content">
             <h2>Ready for Your Mountain Getaway?</h2>
             <p>Book direct and save 15% — create memories that last a lifetime</p>
-            <button class="btn btn-primary btn-large" onclick="openBookingModal('cta_section')">Check Availability</button>
+            <button class="btn btn-primary btn-large" onclick="openBookingModal('cta_section'); gtag('event', 'begin_checkout', {'event_category': 'booking', 'event_label': 'cta_section'});">Check Availability</button>
         </div>
     </section>
 
@@ -1219,7 +1219,7 @@
                     <div class="contact-card">
                         <div class="contact-icon">🌐</div>
                         <h4>Book Online</h4>
-                        <p><a href="#" onclick="openBookingModal('contact_link'); return false;">Check Availability</a></p>
+                        <p><a href="#" onclick="openBookingModal('contact_link'); gtag('event', 'begin_checkout', {'event_category': 'booking', 'event_label': 'contact_link'}); return false;">Check Availability</a></p>
                     </div>
                 </div>
                 <div class="contact-features">
