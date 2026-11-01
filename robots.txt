@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /index.html.backup
+Disallow: /README.md
+Disallow: /wrangler.json
+
+Sitemap: https://classybearcabin.com/sitemap.xml

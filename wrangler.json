@@ -3,6 +3,6 @@
     "compatibility_date": "2026-01-31",
     "assets": {
         "directory": "./",
-        "exclude": [".git/**", "*.pack", "*.idx"]
+        "exclude": [".git/**", "*.pack", "*.idx", "README.md", "wrangler.json", "*.backup", ".gitignore"]
     }
 }
